@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/product.css" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Martflix</title>
+    <style>
+      /* mode button code  */
+      .modeBox{
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: fixed;
+          left: 35%;
+          top: 40%;
+          z-index: 1000;
+      }
+      .button{
+          position: relative;
+          display: block;
+          width: 100px;
+          height: 50px;
+          border-radius: 200px;
+          background-color: white;
+          cursor: pointer;
+          transition: 0.3s;
+      }
+      #checkbox{
+          visibility: hidden;
+      }
+      .button::after{
+          content: "";
+          width: 40px;
+          height: 40px;
+          border-radius: 200px;
+          background-color: green;
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          transition: 0.3s;
+      }
+      #checkbox:checked + .button {
+          background-color: rgb(40, 37, 37);
+          transition: 0.3s;
+          /* box-shadow: inset 2px 2px 20px 1px grey , inset 2px -2px 20px 1px grey; */
+      }
+      #checkbox:checked + .button::after{
+          transform: translateX(51px);
+          transition: 0.3s;
+          background-color: black;
+      }
+      .moon{
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          top: 49%;
+          right: 47.2%;
+          pointer-events: none;
+          fill: grey;
+      }
+      .dark {
+          background: black;
+          color: white;
+        }
+      .sun{
+          width: 25px;
+          height: 25px;
+          position: absolute;
+          top: 49.42%;
+          left: 47.4%;
+          pointer-events: none;
+          fill: white;
+      }
+      /* mode button ends  */
+          </style>
+  </head>
+  <body>
+    <!-- mode button starts -->
+    <div class="modeBox">
+      <input type="checkbox" name="" id="checkbox">
+      <label for="checkbox" class="button"> </label>
+      <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+  
+  <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+  <svg width="800px" height="800px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"  class="sun">
+  
+  <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+  
+  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <g id="SVGRepo_iconCarrier"> <title>sun-solid</title> <g id="Layer_2" data-name="Layer 2"> <g id="invisible_box" data-name="invisible box"> <rect width="48" height="48" fill="none"/> </g> <g id="Q3_icons" data-name="Q3 icons"> <g> <path d="M24,10a2,2,0,0,0,2-2V4a2,2,0,0,0-4,0V8A2,2,0,0,0,24,10Z"/> <path d="M24,38a2,2,0,0,0-2,2v4a2,2,0,0,0,4,0V40A2,2,0,0,0,24,38Z"/> <path d="M36.7,14.1l2.9-2.8a2.3,2.3,0,0,0,0-2.9,2.3,2.3,0,0,0-2.9,0l-2.8,2.9a2,2,0,1,0,2.8,2.8Z"/> <path d="M11.3,33.9,8.4,36.7a2.3,2.3,0,0,0,0,2.9,2.3,2.3,0,0,0,2.9,0l2.8-2.9a2,2,0,1,0-2.8-2.8Z"/> <path d="M44,22H40a2,2,0,0,0,0,4h4a2,2,0,0,0,0-4Z"/> <path d="M10,24a2,2,0,0,0-2-2H4a2,2,0,0,0,0,4H8A2,2,0,0,0,10,24Z"/> <path d="M36.7,33.9a2,2,0,1,0-2.8,2.8l2.8,2.9a2.1,2.1,0,1,0,2.9-2.9Z"/> <path d="M11.3,14.1a2,2,0,0,0,2.8-2.8L11.3,8.4a2.3,2.3,0,0,0-2.9,0,2.3,2.3,0,0,0,0,2.9Z"/> <path d="M24,14A10,10,0,1,0,34,24,10,10,0,0,0,24,14Z"/> </g> </g> </g> </g>
+  
+  </svg>
+      <?xml version="1.0" encoding="utf-8"?>
+  <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+  <svg  width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" class="moon">
+  <title>moon</title>
+  <path d="M10.895 7.574c0 7.55 5.179 13.67 11.567 13.67 1.588 0 3.101-0.38 4.479-1.063-1.695 4.46-5.996 7.636-11.051 7.636-6.533 0-11.83-5.297-11.83-11.83 0-4.82 2.888-8.959 7.023-10.803-0.116 0.778-0.188 1.573-0.188 2.39z"></path>
+  </svg>
+      </div>
+      <!-- mode button code ends -->
+    <!-- signup modal window -->
+    <div class="modal-signup hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Shop from us <br />
+        in just <span class="highlight">5 minutes</span>
+      </h2>
+      <form class="modal__form">
+        <label>First Name</label>
+        <input class="name" type="text" />
+        <label >Last Name</label>
+        <input class="lastName" type="text" />
+        <label>Email Address</label>
+        <input class="email" type="email" />
+        <button class="btn btn--submit">Start shopping &rarr;</button>
+      </form>
+    </div>
+    <div class="overlay-singup hidden "></div>
+
+    <!-- newsletter modal window -->
+    <div class="overlay" data-overlay></div>
+    <div class="modal" data-modal>
+      <div class="modal-close-overlay" data-modal-overlay></div>
+
+      <div class="modal-content">
+        <button class="close-modal-news" data-modal-close>
+          &times;
+        </button>
+
+        <div class="newsletter-img">
+          <img
+            src="/images/productpageimg/news-leter.jpg"
+            alt="subscribe newsletter"
+            width="400"
+            height="400"
+          />
+        </div>
+
+        <div class="newsletter">
+          <form action="#">
+            <div class="newsletter-header">
+              <h3 class="newsletter-title">Subscribe Newsletter.</h3>
+
+              <p class="newsletter-desc">
+                Subscribe the <b>MartFlix</b> to get latest products and discount
+                update.
+              </p>
+            </div>
+
+            <input
+              type="email"
+              name="email"
+              class="email-field"
+              placeholder="Email Address"
+              required
+            />
+
+            <button type="submit" class="btn-newsletter">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- main header and navigation  -->
+    <header class="Header" id="section--01">
+      <nav class="nav">
+        <img src="/images/martflixLogo.png" alt="MartFlix Logo" class="nav__logo "
+        id="logo" />
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="/html/index.html">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="section--2">About</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/html/product.html">Products</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/html/blog.html">Blog</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="section--5">Research</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--btn btn--show-modal" href="#">Shop now</a>
+          </li>
+          <li class="nav__item icon-cart">
+            <svg
+              class="cart-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512"
+            >
+              <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+              />
+            </svg>
+            <span>0</span>
+          </li>
+        </ul>
+      </nav>
+      <!-- notification slide -->
+      <div class="notification-toast" data-toast>
+        <button class="toast-close-btn" data-toast-close>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+  
+        <div class="toast-banner">
+          <img
+            src="/images/productpageimg/milk.jpg"
+            alt="Milk"
+            width="80"
+            height="70"
+          />
+        </div>
+  
+        <div class="toast-detail">
+          <p class="toast-message">Someone in new just bought</p>
+  
+          <p class="toast-title">5 liter milk</p>
+  
+          <p class="toast-meta"><time datetime="PT2M">2 Minutes</time> ago</p>
+        </div>
+      </div>
+
+        <!-- shopping cart modal window   -->
+      <div class="modal-cart hidden">
+        <button class = "close-modal">&times;</button>
+        <h2 >Shopping Cart</h2>
+       <div class="list-cart">
+       
+       
+           
+              
+                
+        </div>
+      </div>
+        <div class="overlay-cart hidden">
+          </div>
+
+     
+      
+      <div class="change__mode">
+        <div class="dark__mode">
+        
+          
+          
+          
+        </div>
+        <div class="snowflakes-container">
+         
+        </div>
+      </div>
+      
+    </header>
+
+    <!-- Featured products section -->
+    <section class = " section ">
+      <div class="section__title">
+        <h2 class="section__description">
+          Products
+        </h2>
+        <h3 class="section__header">
+          Featured products.
+      </div>
+      <div class="slider-component">
+     <div class = "back--btn slide--btn"> <img class="back--img slide--img" src="/images/productpageimg/back.png"></div>
+      <div class="section--featured">
+
+      
+      </div>
+     <div class = "next--btn slide--btn"> <img class="next--img slide--img"src="/images/productpageimg/next.png"></div>
+    </div>
+    
+    </section>
+
+    <!-- About products section -->
+    <div class="overlay-showcase hidden"></div>
+    <div class="modal-showcase hidden">
+      <button class = "close-modal-showcase">&times;</button>
+      
+      <div class = "showcase-wrapper">
+              <div class="showcase-container">
+        <div class="showcase">
+          <div class="showcase-banner">
+            <img
+              src="/images/productpageimg/milk.jpg"
+              alt="Milk"
+              class="showcase-img"
+            />
+          </div>
+
+          <div class="showcase-content">
+            
+
+            <a href="#">
+              <h3 class="showcase-title">
+                Milk
+              </h3>
+            </a>
+
+            <p class="showcase-desc">
+              Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+              dolor sit amet consectetur Lorem ipsum dolor
+            </p>
+
+            <div class="price-box">
+              <p class="price">$150.00</p>
+
+              <del>$200.00</del>
+            </div>
+
+            <button class="btn ">add to cart</button>
+
+            <div class="showcase-status">
+              <div class="wrapper">
+                <p>already sold: <b>20</b></p>
+
+                <p>available: <b>40</b></p>
+              </div>
+
+              <div class="showcase-status-bar"></div>
+            </div>
+
+
+
+            <div class="countdown-box">
+              <p class="countdown-desc">Hurry Up! Offer ends in:</p>
+
+              <div class="countdown">
+                <div class="countdown-content">
+                  <p class="display-number">360</p>
+
+                  <p class="display-text">Days</p>
+                </div>
+
+                <div class="countdown-content">
+                  <p class="display-number">24</p>
+                  <p class="display-text">Hours</p>
+                </div>
+
+                <div class="countdown-content">
+                  <p class="display-number">59</p>
+                  <p class="display-text">Min</p>
+                </div>
+
+                <div class="countdown-content">
+                  <p class="display-number">00</p>
+                  <p class="display-text">Sec</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <!-- Products categories section in tabbed component -->
+    <section class="section" id="section--1">
+      <div class="section__title">
+        <h2 class="section__description">
+          Products
+        </h2>
+        <h5 class="section__header">Categories</h5>
+      </div>
+      <div class="product-box">
+        <div class="products__tab-container">
+          <button id="dairy"
+            class="btn products__tab products__tab--1 products__tab--active"
+            data-tab="1"
+          >
+            Dairy
+          </button>
+          <button id="fruits-veggies" class="btn products__tab products__tab--2" data-tab="2">
+            Ftuits and vegetables
+          </button>
+          <button id="grains" class="btn products__tab products__tab--3" data-tab="3">
+            Grains
+          </button>
+          <button class="btn products__tab products__tab--4" data-tab="4">
+            Meat
+          </button>
+          <button class="btn products__tab products__tab--5" data-tab="5">
+            Oils and vinegars
+          </button>
+        </div>
+        <div
+          class="products__content products__content--1 products__content--active"
+        ></div>
+        <div class="products__content products__content--2"></div>
+        <div class="products__content products__content--3"></div>
+        <div class="products__content products__content--4"></div>
+        <div class="products__content products__content--5"></div>
+      </div>
+    </section>
+    <!-- Footer section -->
+    <section class = "main--footer " >
+      <footer class="footer">
+       <ul class="footer__nav">
+         <li class="footer__item">
+           <a class="footer__link" href="#">Home</a>
+         </li>
+         <li class ="footer__item">
+           <a class = "footer__link" href="#">About</a>
+         </li>
+         <li class="footer__item">
+           <a class="footer__link" href="#">Products</a>
+         </li>
+         <li class="footer__item">
+           <a class="footer__link" href="#">Blog</a>
+           </li>
+           <li class="footer__item">
+             <a class="footer__link" href="#">Research</a>
+           </li>
+             
+       </ul>
+       <img src="/images/productpageimg/logo.png" alt="MartFlix Logo" class="footer__logo" />
+       <p class="footer__copyright">
+         &copy; Copyright by
+         <a class="footer__link" href="#">MartFlix</a>
+       </p>
+      </footer>
+     </section>
+    <script src="/js/product.js"></script>
+    <script>
+      // mode button starts js
+      var checkBox = document.querySelector('#checkbox')
+      var body = document.body
+      var sun = document.querySelector(".sun");
+      var moon = document.querySelector(".moon");
+      
+      checkBox.addEventListener("change", ()=>{
+          if (checkBox.checked) {
+              body.classList.add("dark")
+              moon.style.fill = "white";
+              sun.style.fill = "grey";
+          } else {
+              body.classList.remove("dark")
+              sun.style.fill = "white";
+              moon.style.fill = "grey";
+          }
+      })
+      //mode button ends
+          </script>
+  </body>
+</html>

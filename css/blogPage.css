@@ -1,0 +1,385 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.page1{
+    display: grid;
+    gap: 20px;
+}
+.page1 .pTitle, .page1 h1{
+  font-size: 30px;
+}
+.page1 p, .page1 b, .page1 label{
+  font-size: 18px;
+}
+.title{
+    padding: 2% 5%;
+    display: grid;
+    gap: 20px;
+}
+.titleFoot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.authorImage{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: gray;
+    overflow: hidden;
+}
+.authorDetails{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.authorName{
+    display: grid;
+}
+.description{
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 70% 15% ;
+    padding: 2% 5%;
+}
+.time{
+    padding: 0 10px;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+.titleFoot{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.tag{
+    width: 100px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 5px;
+    padding: 5px;
+}
+.like, .comment, .share{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.like{
+    border-left: 1px solid white;
+    padding-left: 20px;
+}
+.like img{
+    width: 20px;
+}
+.comment img{
+    width: 30px;
+}
+.share img{
+    width: 20px;
+}
+.firstBar{
+  display: grid;
+  gap: 20px;
+  position: sticky;
+  top: 50px;
+}
+.socialMedia{
+    display: flex;
+    gap: 5px;
+}
+.fb, .insta, .twitter, .linkedin{
+    width: 50px;
+    height: 45px;
+    background-color: rgba(180, 176, 176, 0.898);
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.socialMedia img{
+    width: 20px;
+}
+.likeBtn{
+    width: 180px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid rgba(242, 237, 237, 0.527);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.likeBtn img{
+    width: 25px;
+}
+.likeCount{
+    width: 50px;
+    background-color: transparent;
+    color: grey;
+    font-size: 18px;
+    border-radius: 5px;
+    border: transparent;
+    pointer-events: none;
+}
+.last{
+    border-bottom: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.blogDesc{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.rTags{
+    border: 1px solid gray;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+.related{
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+}
+a{
+  text-decoration: none;
+  color: grey;
+}
+.imp{
+  color: red;
+}
+.related button{
+    padding: 15px 30px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid purple;
+    color: purple;
+}
+.post{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pFoot{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+}
+.bookmark{
+    position: absolute;
+    width: 30px;
+    left: 15%;
+    top: -300px;
+}
+.tooltip {
+    position: relative;
+    left: 70%;
+    top: 80px;
+    display: inline-block;
+  }
+  .image{
+    width: 100%;
+  }
+  .descPhoto{
+    width: 100%;
+    border-radius: 10px;
+  }
+  .posts{
+    display: flex;
+    gap: 25px;
+    padding: 0 5%;
+  }
+  .post1{
+    display: grid;
+    gap: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    /* background-color: rgba(128, 128, 128, 0.115); */
+    padding-bottom: 50px;
+  }
+  .posts p, .posts h1, .pFoot{
+    padding: 0 20px;
+  }
+  .posts .tag{
+    margin-left: 20px;
+  }
+  .paragraph{
+    padding: 20px 0;
+  }
+  .commentShow{
+    display: grid;
+    gap: 20px;
+  }
+  .commentators{
+    display: grid;
+    gap: 20px;
+  }
+  .commentatorDetails{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .commentReplyer{
+    border-left: 5px solid blue;
+    padding-left: 50px;
+  }
+  .commentators span{
+    color: blue;
+  }
+  .border{
+    border-bottom: 1px solid grey;
+    padding-bottom: 30px;
+  }
+  .reply img{
+    width: 20px;
+  }
+  .reply{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .commentatorImage{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: gray;
+    overflow: hidden;
+  }
+  .c1{
+    width: 60px;
+    height: 60px;
+  }
+  .nameMail{
+    display: flex;
+    gap: 20px;
+  }
+  .nameField, .emailField{
+    display: grid;
+    width: 100%;
+    gap: 10px;
+  }
+  #mail, #name{
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 0 20px;
+    background-color: transparent;
+    color: white;
+  }
+  #comment{
+    border-radius: 20px;
+    border: 1px solid gray;
+    padding: 20px;
+    background-color: transparent;
+    color: white;
+  }
+  .commentField{
+    display: grid;
+    gap: 10px;
+  }
+  .commentContainer form{
+    display: grid;
+    gap: 20px;
+  }
+  .commentContainer{
+    background-color: rgba(128, 128, 128, 0.115);
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .rememberBox{
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+  }
+  .rememberBox input{
+    width: 20px;
+  }
+  form button{
+    padding: 15px;
+    width: 20%;
+    border-radius: 10px;
+    border: 1px solid purple;
+    background-color: rgb(175, 82, 175);
+  }
+  .sideBar{
+    display: flex;
+    flex-direction: column;
+    gap: 1400px;
+  }
+  .subscribe{
+    display: grid;
+    gap: 20px;
+    position: sticky;
+    top: 320px;
+  }
+  .subscribe button{
+    padding: 15px;
+    border-radius: 10px;
+    border: transparent;
+    background-color: rgb(173, 61, 173);
+  }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 270px;
+    margin-left: -65px;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 105%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+    transform: rotate(-90deg);
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  button:hover{
+    background-color: purple;
+    color: white;
+  }
+  .likeButton:active{
+    scale: 1.5;
+  }
+  .fb:hover, .insta:hover, .twitter:hover, .linkedin:hover{
+    background-color: white;
+  }
+  .likeBtn:hover{
+    background-color: white;
+    color: black;
+  }
+  .rTags:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+  .reveal{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.animate{
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/product.css" />
+    <link rel="stylesheet" href="/css/blogPage.css">
+    <title>Blog page 5</title>
+    <style>
+      /* mode button code  */
+      .modeBox{
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: fixed;
+          left: 35%;
+          top: 40%;
+          pointer-events: none;
+      }
+      .bgImage{
+               background-image: url(/images/blogImages/sustainable.jpeg);
+               min-height: 500px;
+               background-attachment: fixed;
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: cover;
+               padding: -5%;
+               }
+      .button{
+          position: relative;
+          display: block;
+          width: 100px;
+          height: 50px;
+          border-radius: 200px;
+          background-color: white;
+          /* box-shadow: inset 1px 1px 20px 1px black , inset 1px -1px 20px 1px black; */
+          cursor: pointer;
+          pointer-events: all;
+          transition: 0.3s;
+      }
+      #checkbox{
+          visibility: hidden;
+      }
+      .button::after{
+          content: "";
+          width: 40px;
+          height: 40px;
+          border-radius: 200px;
+          background-color: green;
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          transition: 0.3s;
+      }
+      #checkbox:checked + .button {
+          background-color: rgb(40, 37, 37);
+          transition: 0.3s;
+          /* box-shadow: inset 2px 2px 20px 1px grey , inset 2px -2px 20px 1px grey; */
+      }
+      #checkbox:checked + .button::after{
+          transform: translateX(51px);
+          transition: 0.3s;
+          background-color: black;
+      }
+      .moon{
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          top: 49%;
+          right: 47.2%;
+          pointer-events: none;
+          fill: grey;
+      }
+      .dark {
+          background: black;
+          color: white;
+        }
+      .sun{
+          width: 25px;
+          height: 25px;
+          position: absolute;
+          top: 49.42%;
+          left: 47.4%;
+          pointer-events: none;
+          fill: white;
+      }
+      /* mode button ends  */
+          </style>
+  </head>
+  <body>
+    
+      <!-- mode button starts -->
+      <div class="modeBox">
+        <input type="checkbox" name="" id="checkbox">
+        <label for="checkbox" class="button"> </label>
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+    
+    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+    <svg width="800px" height="800px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"  class="sun">
+    
+    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+    
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <g id="SVGRepo_iconCarrier"> <title>sun-solid</title> <g id="Layer_2" data-name="Layer 2"> <g id="invisible_box" data-name="invisible box"> <rect width="48" height="48" fill="none"/> </g> <g id="Q3_icons" data-name="Q3 icons"> <g> <path d="M24,10a2,2,0,0,0,2-2V4a2,2,0,0,0-4,0V8A2,2,0,0,0,24,10Z"/> <path d="M24,38a2,2,0,0,0-2,2v4a2,2,0,0,0,4,0V40A2,2,0,0,0,24,38Z"/> <path d="M36.7,14.1l2.9-2.8a2.3,2.3,0,0,0,0-2.9,2.3,2.3,0,0,0-2.9,0l-2.8,2.9a2,2,0,1,0,2.8,2.8Z"/> <path d="M11.3,33.9,8.4,36.7a2.3,2.3,0,0,0,0,2.9,2.3,2.3,0,0,0,2.9,0l2.8-2.9a2,2,0,1,0-2.8-2.8Z"/> <path d="M44,22H40a2,2,0,0,0,0,4h4a2,2,0,0,0,0-4Z"/> <path d="M10,24a2,2,0,0,0-2-2H4a2,2,0,0,0,0,4H8A2,2,0,0,0,10,24Z"/> <path d="M36.7,33.9a2,2,0,1,0-2.8,2.8l2.8,2.9a2.1,2.1,0,1,0,2.9-2.9Z"/> <path d="M11.3,14.1a2,2,0,0,0,2.8-2.8L11.3,8.4a2.3,2.3,0,0,0-2.9,0,2.3,2.3,0,0,0,0,2.9Z"/> <path d="M24,14A10,10,0,1,0,34,24,10,10,0,0,0,24,14Z"/> </g> </g> </g> </g>
+    
+    </svg>
+        <?xml version="1.0" encoding="utf-8"?>
+    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+    <svg  width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" class="moon">
+    <title>moon</title>
+    <path d="M10.895 7.574c0 7.55 5.179 13.67 11.567 13.67 1.588 0 3.101-0.38 4.479-1.063-1.695 4.46-5.996 7.636-11.051 7.636-6.533 0-11.83-5.297-11.83-11.83 0-4.82 2.888-8.959 7.023-10.803-0.116 0.778-0.188 1.573-0.188 2.39z"></path>
+    </svg>
+        </div>
+        <!-- mode button code ends -->
+    <!-- main header and navigation  -->
+    <header class="Header" id="section--01">
+      <nav class="nav">
+        <img src="/images/productpageimg/logo.png" alt="MartFlix Logo" class="nav__logo "
+        id="logo" />
+        <ul class="nav__links">
+            <li class="nav__item">
+              <a class="nav__link" href="/html/index.html">Home</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="/html/aboutus.html">About</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="/html/product.html">Products</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="/html/blog.html">Blog</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="/html/researchpage.html">Research</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--btn btn--show-modal" href="/html/login.html">Join</a>
+            </li>
+          <li class="nav__item icon-cart">
+            <svg
+              class="cart-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512"
+            >
+              <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+              />
+            </svg>
+            <span>0</span>
+          </li>
+        </ul>
+      </nav>
+      
+
+        <!-- shopping cart modal window   -->
+      <div class="modal-cart hidden">
+        <button class = "close-modal">&times;</button>
+        <h2 >Shopping Cart</h2>
+       <div class="list-cart">
+           
+        </div>
+      </div>
+        <div class="overlay-cart hidden">
+          </div>
+    </header>
+    <!-- header ends here  -->
+
+    <div class="page1">
+      <div class="title">
+          <h1>Exploring Sustainable Living: Tips for Eco-Friendly Practices</h1>
+          <div class="titleFoot">
+              <div class="titleFoot"><label class="tag">Technology</label> <span class="time">2 weeks ago</span> <div class="like"><img src="/images/blogIcon/like.png">5</div> <div class="comment"><img src="/images/blogIcon/comment.png">3</div> <div class="share"><img src="/images/blogIcon/share.png">2</div></div>
+              <div class="authorDetails">
+                  <div class="authorImage">
+                      <img src="/images/blogImages/author.jpeg" alt="" class="c1" >
+                  </div>
+                  <div class="authorName">
+                      <label class="author">Author</label>
+                      <a href="#">Madan Acharya</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="bgImage "></div>
+      <div class="description">
+          <div class="blogDesc reveal">
+              <b class="reveal" >"As environmental concerns continue to rise, sustainable living has become an increasingly popular lifestyle choice for those looking to reduce their ecological footprint and promote a healthier planet. Sustainable living involves making choices that preserve natural resources, reduce waste, and minimize pollution. This blog will explore practical tips for incorporating eco-friendly practices into daily life, covering areas such as energy conservation, waste reduction, sustainable consumption, and more."</b>
+              <h2 class="pTitle reveal">Introduction</h2>
+              <p class="reveal" >Sustainable living is about creating a balance between our needs and the health of the environment. It involves making conscious decisions that not only benefit us but also protect and preserve the planet for future generations. From small daily habits to larger lifestyle changes, everyone can contribute to a more sustainable world. This blog aims to provide actionable tips and insights for anyone looking to embrace sustainable living.</p>
+              <img src="/images/blogImages/sustainable2.jpeg" class=" descPhoto reveal" >
+              <p class="reveal" >The advent of email revolutionized written communication, allowing for near-instantaneous delivery of messages across vast distances. No longer constrained by the limitations of traditional mail, individuals and businesses alike could communicate more efficiently and effectively. Similarly, instant messaging platforms have further accelerated communication, enabling real-time conversations and fostering instant connectivity. Whether it's coordinating with colleagues across different time zones or staying in touch with loved ones halfway across the globe, these platforms have made the world feel smaller and more interconnected.
+
+                  Video calls have brought a new dimension to remote communication, allowing for face-to-face interactions regardless of physical distance. Whether it's a virtual business meeting or a catch-up session with friends and family, video calls facilitate richer and more personal communication experiences. Moreover, social media platforms have emerged as powerful tools for staying connected and building communities. From sharing updates and photos to engaging in conversations and networking, social media has transformed how we maintain relationships and interact with others.
+                  
+                  Beyond personal communication, technology has also revolutionized collaboration on a global scale. Cloud-based productivity tools enable teams to work together seamlessly, regardless of their physical location. Documents can be shared, edited, and collaborated on in real-time, streamlining workflows and enhancing productivity. Virtual collaboration platforms facilitate remote teamwork, allowing individuals to collaborate on projects and share ideas regardless of geographical constraints. As a result, businesses can tap into a global talent pool, fostering innovation and creativity on a scale never before possible.
+                  
+                  Overall, the revolution in com </p>
+              <h2 class="pTitle reveal">Work: Breaking Boundaries, Embracing Flexibility</h2>
+              <div class="paragraph reveal">
+                  <p>Technology has also reshaped the way we work. The traditional 9-to-5 office setup is no longer the norm, thanks to advancements like remote work and digital collaboration tools. Employees can now work from the comfort of their homes or while traveling, leading to increased productivity and improved work-life balance. Businesses, too, benefit from reduced overhead costs and access to a global talent pool, making remote work a win-win situation for employers and employees alike.</p>
+              </div>
+              <h2 class="pTitle reveal">Shopping: From Storefronts to Screens</h2>
+              <div class="paragraph">
+                <p>  The rise of e-commerce has transformed the retail landscape, allowing consumers to shop for products and services with unprecedented ease and convenience. Whether it's groceries, clothing, electronics, or even cars, almost anything can be purchased online and delivered to your doorstep within days, if not hours. This shift towards digital shopping has forced brick-and-mortar stores to adapt or risk becoming obsolete, marking a fundamental change in the way we buy and sell goods.</p>
+              </div>
+              <h2 class="pTitle reveal">Data: The New Currency of Business</h2>
+              <div class="paragraph">
+                <p>  In today's data-driven world, information is power. Businesses harness the power of big data and analytics to gain valuable insights into customer behavior, market trends, and operational efficiency. By analyzing vast amounts of data in real-time, companies can make informed decisions, personalize their products and services, and stay ahead of the competition. From targeted advertising to predictive maintenance, data has become the lifeblood of modern businesses, driving innovation and growth in every industry.</p>
+              </div>
+              <h2 class="pTitle reveal">Healthcare: Revolutionizing Patient Care</h2>
+              <div class="paragraph">
+                 <p> Technology has also revolutionized the healthcare industry, transforming the way we access medical services and receive care. Telemedicine allows patients to consult with healthcare providers remotely, reducing the need for in-person visits and improving access to healthcare, especially in rural or underserved areas. Wearable devices monitor vital signs and track health metrics, empowering individuals to take control of their well-being and leading to early detection and intervention of health issues. Electronic health records streamline administrative tasks and ensure seamless communication between healthcare professionals, resulting in better patient outcomes and a more efficient healthcare system overall. </p>
+              </div>
+
+              <h2 class="pTitle reveal">Conclusion:</h2>
+              <div class="last paragraph reveal">
+                  <p>Sustainable living is an ongoing journey that involves making conscious choices to reduce our impact on the planet. By implementing eco-friendly practices in areas such as energy conservation, waste reduction, sustainable consumption, and community involvement, we can contribute to a healthier and more sustainable world. Every small action counts, and together, we can make a significant difference in preserving the environment for future generations.
+                      Embracing sustainable living not only benefits the planet but also enhances our quality of life. It fosters a deeper connection with nature, promotes health and well-being, and creates a sense of purpose and responsibility. By exploring and adopting sustainable practices
+                      
+                  </p>
+              </div>
+              <div class="relatedTag reveal">
+                  <b>Related Tags:</b>
+                  <span class="rTags">#Lifestyle</span>
+                  <span class="rTags">#Ux</span>
+                  <span class="rTags">#UI</span>
+              </div>
+              <div class="commentShow">
+                  <h1>4 Comments</h1>
+                  <div class="commentators border">
+                      <div class="commentatorDetails">
+                          <div class="commentatorImage">
+                              <img src="/images/blogImages/commentator2.jpeg" alt="" class="" >
+                          </div>
+                          <div class="commentatorName">
+                              <label class="">Soniya Thapa</label>
+                              <p>5 hours ago</p>
+                          </div>
+                          <div class="reply">
+                              <img src="/images/blogIcon/reply.png" alt="">
+                              <p>Reply</p>
+                          </div>
+                      </div>
+                      <p>It's incredible to see how technology has transformed the way we communicate and collaborate. I can't imagine going back to a time before email and video calls!</p>
+                  </div>
+                  <div class="commentators">
+                      <div class="commentatorDetails">
+                          <div class="commentatorImage">
+                              <img src="/images/blogImages/commentator3.jpeg" alt="" class="c1" >
+                          </div>
+                          <div class="commentatorName">
+                              <label class="">Purnima Darnal</label>
+                              <p>4 days ago</p>
+                          </div>
+                          <div class="reply">
+                              <img src="/images/blogIcon/reply.png" alt="">
+                              <p>Reply</p>
+                          </div>
+                      </div>
+                      <p>I appreciate how technology has made it so much easier to shop for necessities without having to leave the comfort of my home. It's convenient and saves me so much time."</p>
+                  </div>
+                  <div class="commentators commentReplyer border">
+                      <div class="commentatorDetails">
+                          <div class="commentatorImage">
+                              <img src="/images/blogImages/author.jpeg" alt="" class="c1" >
+                          </div>
+                          <div class="commentatorName">
+                              <label class="">Madan Acharya</label>
+                              <p>7 mins ago</p>
+                          </div>
+                          <div class="reply">
+                              <img src="/images/blogIcon/reply.png" alt="">
+                              <p>Reply</p>
+                          </div>
+                      </div>
+                      <p><span>@Purnima Darnal </span>Thank you for sharing your thoughts! It's great to hear about your positive experience with remote work and how technology has improved your productivity. Many others can relate to the benefits of flexibility that technology offers in today's evolving workplace environment</p>
+                  </div>
+                  <div class="commentators border">
+                      <div class="commentatorDetails">
+                          <div class="commentatorImage">
+                              <img src="/images/blogImages/commentator4.jpeg" alt="" class="c1" >
+                          </div>
+                          <div class="commentatorName">
+                              <label class="">Bipul Rai</label>
+                              <p>8 hours ago</p>
+                          </div>
+                          <div class="reply">
+                              <img src="/images/blogIcon/reply.png" alt="">
+                              <p>Reply</p>
+                          </div>
+                      </div>
+                      <p>As someone who works remotely, I've definitely experienced firsthand the benefits of technology in the workplace. It's allowed me to achieve a better work-life balance and be more productive.</p>
+                  </div>
+                  <div class="commentators border">
+                      <div class="commentatorDetails">
+                          <div class="commentatorImage">
+                              <img src="/images/blogImages/commentator1.jpeg" alt="" class="c1" >
+                          </div>
+                          <div class="commentatorName">
+                              <label class="">Rajesh Shrestha</label>
+                              <p>1 day ago</p>
+                          </div>
+                          <div class="reply">
+                              <img src="/images/blogIcon/reply.png" alt="">
+                              <p>Reply</p>
+                          </div>
+                      </div>
+                      <p>While I'm excited about the possibilities that technology offers, I do worry about issues like data privacy and security. It's crucial that we find ways to address these concerns as technology continues to advance.</p>
+                  </div>
+              </div>
+              <div class="commentContainer">
+                  <form>
+                      <h1>Leave a Comment</h1>
+                      <div class="nameMail">
+                          <div class="nameField">
+                              <label>Name <span class="imp" >*</span></label>
+                              <input type="text" name="name" id="name">
+                          </div>
+                          <div class="emailField">
+                              <label>Email <span class="imp" >*</span></label>
+                              <input type="email" name="email" id="mail">
+                          </div>
+                      </div>
+                      <div class="commentField">
+                          <label>Comment <span class="imp" >*</span></label>
+                          <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Type your comment here...."></textarea>
+                      </div>
+                      <div class="rememberBox">
+                          <input type="checkbox" name="save" id="remember">Save my name and email in this browser for the next time I comment.
+                      </div>
+                      <button>Post Comment</button>
+                  </form>
+              </div>
+          </div>
+          <div class="sideBar reveal">
+              <div class="firstBar">
+                  <label class="timeLife">5 mins read</label>
+                  <label class="shareOpt">Share this post:</label>
+                  <div class="socialMedia">
+                      <div class="fb reveal">
+                          <img src="/images/blogIcon/fb.png" alt="">
+                      </div>
+                      <div class="linkedin reveal">
+                          <img src="/images/blogIcon/linkedin.png" alt="">
+                      </div>
+                      <div class="twitter reveal">
+                          <img src="/images/blogIcon/twitter.png" alt="">
+                      </div>
+                      <div class="insta reveal">
+                          <img src="/images/blogIcon/insta.png" alt="">
+                      </div>
+                  </div>
+                  <button class="likeBtn reveal">
+                      <img src="/images/blogIcon/like.png" class="likeButton">Like
+                      <input type="number" name="like" value="0" class="likeCount">
+                  </button>
+              </div>
+              <div class="subscribe">
+                  <label>Enjoy this post? Join our blogpost</label>
+                  <input type="email" name="email" id="mail" placeholder="Email">
+                  <button>Subscribe</button>
+                  <label>Don't forget to share it</label>
+                  <div class="socialMedia">
+                      <div class="fb reveal">
+                          <img src="/images/blogIcon/fb.png" alt="">
+                      </div>
+                      <div class="linkedin reveal">
+                          <img src="/images/blogIcon/linkedin.png" alt="">
+                      </div>
+                      <div class="twitter reveal">
+                          <img src="/images/blogIcon/twitter.png" alt="">
+                      </div>
+                      <div class="insta reveal">
+                          <img src="/images/blogIcon/insta.png" alt="">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="related reveal">
+          <h1>Related Blogs</h1>
+          <button>All Posts>></button>
+      </div>
+      <div class="posts">
+          <div class="post1 reveal">
+             <a href="/html/blogPage2.html"> <img style="width: 450px;" src="/images/blogImages/ai.jpeg" class="image"></a>
+              <div class="tooltip"> <img src="/images/blogIcon/bookmark.png" class="bookmark"><span class="tooltiptext">Read Later</span></div>
+              <label class="tag">Technology</label>
+              <a href="/html/blogPage2.html"><h1>The Future of Artificial Intelligence: Opportunities and Challenges</h1></a>
+              <a href="/html/blogPage2.html"><p>Unveil AI's future: navigating opportunities and challenges in advancing technology, reshaping industries, and addressing ethical considerations for society's benefit. </p></a>
+              <div class="pFoot">Aug 09, 2024  <div class="like likeButton"><img src="/images/blogIcon/like.png">4</div> <div class="comment"><img src="/images/blogIcon/comment.png">3</div> <div class="share"><img src="/images/blogIcon/share.png">2</div></div>
+          </div>
+          <div class="post1 reveal">
+              <a href="/html/blogPage5.html"><img src="/images/blogImages/sustainable.jpeg" class="image"></a>
+              <div class="tooltip"> <img src="/images/blogIcon/bookmark.png" class="bookmark"><span class="tooltiptext">Read Later</span></div>
+              <label class="tag">Technology</label>
+              <a href="/html/blogPage5.html"><h1>Exploring Sustainable Living: Tips for Eco-Friendly Practices </h1></a>
+              <a href="/html/blogPage5.html"><p>Discover eco-friendly living with sustainable tips, fostering a greener lifestyle for individuals and communities, promoting environmental stewardship.</p></a>
+              <div class="pFoot">Aug 09, 2024  <div class="like"><img src="/images/blogIcon/like.png">5</div> <div class="comment"><img src="/images/blogIcon/comment.png">3</div> <div class="share"><img src="/images/blogIcon/share.png">2</div></div>
+          </div>
+          <div class="post1 reveal">
+              <a href="/html/blogPage6.html"><img style="width: 420px;" src="/images/blogImages/education.jpeg" alt="" class="image" ></a>
+              <div class="tooltip"> <img src="/images/blogIcon/bookmark.png" class="bookmark"><span class="tooltiptext">Read Later</span></div>
+              <label class="tag">Technology</label>
+              <a href="/html/blogPage6.html"><h1>The Rise of Remote Learning: Navigating Education in a Digital Age</h1></a>
+              <a href="/html/blogPage6.html"><p>Remote learning revolutionizes education, leveraging digital tools amidst global changes, transforming traditional paradigms for educators and learners alike.</p></a>
+              <div class="pFoot">Aug 09, 2024  <div class="like"><img src="/images/blogIcon/like.png">5</div> <div class="comment"><img src="/images/blogIcon/comment.png">3</div> <div class="share"><img src="/images/blogIcon/share.png">2</div></div>
+          </div>
+      </div>
+  </div>
+    
+    <!-- Footer section -->
+    <section class = "main--footer " >
+      <footer class="footer">
+       <ul class="footer__nav">
+         <li class="footer__item">
+           <a class="footer__link" href="#">Home</a>
+         </li>
+         <li class ="footer__item">
+           <a class = "footer__link" href="#">About</a>
+         </li>
+         <li class="footer__item">
+           <a class="footer__link" href="#">Products</a>
+         </li>
+         <li class="footer__item">
+           <a class="footer__link" href="#">Blog</a>
+           </li>
+           <li class="footer__item">
+             <a class="footer__link" href="#">Research</a>
+           </li>
+             
+       </ul>
+       <img src="/images/productpageimg/logo.png" alt="MartFlix Logo" class="footer__logo" />
+       <p class="footer__copyright">
+         &copy; Copyright by
+         <a class="footer__link" href="#">MartFlix</a>
+       </p>
+      </footer>
+     </section>
+    <script src="/js/product.js"></script>
+    <script src="/js/blogPage.js"></script>
+    <script>
+      // mode button starts
+      var checkBox = document.querySelector('#checkbox')
+      var body = document.body
+      var sun = document.querySelector(".sun");
+      var moon = document.querySelector(".moon");
+      
+      checkBox.addEventListener("change", ()=>{
+          if (checkBox.checked) {
+              body.classList.add("dark")
+              moon.style.fill = "white";
+              sun.style.fill = "grey";
+          } else {
+              body.classList.remove("dark")
+              sun.style.fill = "white";
+              moon.style.fill = "grey";
+          }
+      })
+      //mode button ends
+          </script>
+  </body>
+</html>

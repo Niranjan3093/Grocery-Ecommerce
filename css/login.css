@@ -1,0 +1,163 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    max-width: 900px;
+    margin: 20px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-container {
+    flex: 1;
+    background: url('/images/login/Login.png') no-repeat center center;
+    background-size: cover;
+    min-width: 300px;
+    position: relative;
+}
+
+.image-container img {
+    display: none;
+}
+
+.form-container {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-toggle {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.form-toggle button {
+    flex: 1;
+    padding: 15px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.form-toggle button:hover {
+    background: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+    display: none;
+    flex-direction: column;
+}
+
+.form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form input:focus {
+    border: 1px solid #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.1);
+}
+
+.form button {
+    width: 100%;
+    padding: 15px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.form button:hover {
+    background: #218838;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.social-login button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+}
+
+.social-login .google {
+    background: #db4437;
+    color: #fff;
+}
+
+.social-login .google:hover {
+    background: #c23321;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-login .facebook {
+    background: #3b5998;
+    color: #fff;
+}
+
+.social-login .facebook:hover {
+    background: #2d4373;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgot-password a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}

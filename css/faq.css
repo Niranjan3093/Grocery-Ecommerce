@@ -1,0 +1,57 @@
+/* Styles for the FAQ section */
+.faq-section {
+    max-width:1000px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    /* background-color: #ffffff; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the FAQ section title */
+.faq-section h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* Styles for each FAQ item */
+.faq {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+
+/* Styling for FAQ questions */
+.faq-question {
+    margin: 0;
+    font-weight: 600;
+    color: #007BFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling for the arrow icon */
+.faq-question::after {
+    content: '\25BA';
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+/* Rotate arrow when FAQ is open */
+.faq.open .faq-question::after {
+    transform: rotate(90deg);
+}
+
+/* Styling for FAQ answers */
+.faq-answer {
+    margin: 10px 0 0;
+    display: none;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}

@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+  }
+ 
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 89px;
+    width: 90%;
+    padding: 0 60px;
+    background-color: #f3f3f3;
+    position: fixed;
+    z-index:999;
+
+  }
+  .nav a {
+    text-decoration: none;
+    color: #222;
+  }
+  .nav__links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  .nav__item {
+    margin-left: 40px;
+  }
+  .nav__link--button {
+    background-color: #5ec576;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 500;
+    border: none;
+    padding: 12.5px 45px;
+    border-radius: 99px;
+    cursor: pointer;
+    display: inline-block;
+    
+  }
+  .blank
+{
+  width: 100%;
+  height: 90px;
+}
+/* form section */
+.form-section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    background-image: url(/images/aboutusimage/img/cherrydeck-UpsEF48wAgk-unsplash.jpg);
+}
+.form
+  {
+    width:600px;
+    height: 700px;
+    /* padding: 10px; */
+    border: 2px solid black;
+    position: relative;
+    z-index:1;
+    color: white;
+    border-radius:10px ;
+    background:linear-gradient(-360deg,rgb(25, 160, 56),black);
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap ;
+    box-shadow: 0px 0px 4px 4px white;
+  }
+  .form::before
+  {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+  height:700px;
+  width: 600px;
+  background-image:url(/images/aboutusimage/img/pexels-pixworthmedia-3145239.jpg);
+
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.9;
+  filter: blur(6px);
+  }
+  .form h1
+  {
+    font-size:45px;
+  }
+  /* form */
+ #myForm
+ {
+  display: flex;
+  height: fit-content;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  
+ }
+ /*Style for input group*/
+ .inputGroup
+ {
+  position:relative;
+  height: 40px;
+  width: 40%;
+  margin: 20px;
+  display: flex;
+  flex-direction:column;
+ }
+ /* style for input */
+ .inputGroup input {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  border: 2px solid white;
+  position: relative;
+  border-radius: 0px 10px;
+  z-index: 999;
+}
+
+/* .inputGroup input::before {
+  content: ""; 
+  height: 45px;
+  width: 110%;
+  padding: 10px;
+  background-color: black;
+  font-size: 16px;
+  border: 9px solid white;
+  position: absolute;
+  top: 0;
+  left: 0;
+ 
+  z-index: -1;
+}
+ */
+
+ /* style for phone number */
+ select
+ {
+  position: absolute;
+  height: 106%;
+  width:52px;
+  color: white;
+  background-color: transparent;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  border-right:none ;
+  outline: none;
+  border-radius:0px 0px 0px 10px ;
+ }
+ select option
+ {
+  background-color:transparent;
+  color: brown;
+ }
+ .phone
+ {
+  margin-left: 50px;
+  border-left:none ;
+ }
+ /* style for textarea */
+.textarea
+ {
+  width: 86.5%;
+  position: relative;
+  margin: 20px;
+  display: flex;
+  flex-direction:column;
+ }
+ .textarea textarea
+ {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  border:2px solid white;
+  border-radius:0px 10px;
+ }
+ label
+ {
+  position: absolute;
+  color:white;
+  top: -34px;
+  padding-top: 10px;
+  font-size: 20px;
+ }
+/*  */
+.footer {
+    padding: 99px 30px;
+    background-color: #37383d;
+    
+  }
+  
+  .footer__nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .footer__item {
+    margin-right: 40px;
+  }
+  .footer__link {
+    font-size: 16px;
+    color: #eee;
+    text-decoration: none;
+  }
+  .footer__logo {
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .footer__copyright {
+    font-size: 14px;
+    color: #aaa;
+    text-align: center;
+  }
+  .footer__copyright .footer__link {
+    font-size: 14px;
+  }
+  .footer ul,img
+  {
+    animation: scroll-animation linear both;
+    animation-timeline: view();
+    animation-range: entry 50%  cover 50%;
+  }
+  
+  
+  
+  

@@ -1,0 +1,392 @@
+/* Reset default margins and paddings for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Set default font */
+}
+
+body {
+    /* background-color: rgb(49, 48, 48); */
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow-x: hidden;
+}
+/* Styles for the newProducts section */
+.newProducts {
+    margin: 40px auto;
+    width: 1400px;
+    height: 410px;
+    position: relative;
+    top: -25px;
+    border-radius: 8px;
+    padding-top: 30px;
+    /* background-color:#f8f8f8 ; */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+
+}
+
+/* Styles for navigation buttons in slider */
+.slider-container {
+    width: 90%;
+    margin-left: 5%;
+    overflow-x: scroll;
+}
+.slider-container::-webkit-scrollbar{
+    display: none;
+}
+
+/* Style for the slider element */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Styles for navigation buttons */
+.sliderButton{
+    position: relative;
+    top: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#prevBtn {
+    z-index: 1;
+    border-radius: 50%;
+    scale: 1.5;;
+    width: 25px;
+}
+
+#nextBtn {
+    z-index: 1;
+    border-radius: 50%;
+    width: 25px;
+    scale: 1.5;
+}
+
+/* Styles for individual product cards */
+.product {
+    height: 280px;
+    width: 250px;
+    /* background-color: #f4f0f0; */
+    display: inline;
+    margin: 20px;
+    border-radius: 15px;
+    color: black;
+    padding-top: 25px;
+    text-align: center;
+    position: relative;
+}
+.product:hover {
+    transform: scale(1.01);
+}
+
+.productinfo{
+    /* background-color: white; */
+    width: 190px;
+    height: 90px;
+    border-radius: 10px;
+    margin-left: 4px;
+    margin-top: 117px;
+
+}
+
+/* Additional styles for the promoBox */
+.productz {
+    height: 250px;
+    width: 200px;
+    /* background-color: #f3f3f3; */
+    position: absolute;
+    border-radius: 15px;
+    right: -220px;
+    padding-top: 25px;
+    text-align: center;
+    margin: 20px;
+}
+
+/* More button styling */
+.more {
+    position: absolute;
+    right: -350px;
+    top: 125px;
+}
+
+.seeMore{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.seeMoreButton{
+    width: 70px;
+    background-color: green;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: transparent;
+}
+.seeMore a{
+    color: black;
+}
+/* Styling for review section */
+.reviews {
+    position: absolute;
+    left: 8px;
+    top: 200px;
+    color: black;
+}
+
+/* Hover effects for various product elements */
+.product:hover,
+.product2:hover,
+.product3:hover,
+.product4:hover,
+.product5:hover {
+    box-shadow: -1px -1px 27px -6px rgba(0,0,0,1);
+    transition: 0.2s;
+}
+
+/* Styles for each slide in the slider */
+.slide {
+    width: 1000px;
+    height: 433px;
+    object-fit: cover;
+}
+
+/* Styles for the features section */
+.featureBox {
+    width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 15px;
+    /* background-color: #f8f8f8; */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for headings in the features section */
+.featureBox h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 600;
+    /* color: #333; */
+}
+
+/* Layout of features items */
+.Features {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Styles for each feature item */
+.featureItem {
+    width: 30%;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 30px;
+    /* background-color: white; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+}
+
+/* Effects when hovering over a feature item */
+.featureItem:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-color: rgb(5, 161, 96);
+    /* background-color: #f0f8ff; */
+}
+
+/* Styles for images in the feature items */
+.featureItem img {
+    width: 80px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    /* background-color: #f0f8ff; */
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for titles in feature items */
+.featureItem h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    /* color: #333; */
+}
+
+/* Styles for the description text in feature items */
+.featureItem .description {
+    font-size: 15px;
+    /* color: #666; */
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Styles for the 'Read More' link in feature items */
+.featureItem .readMore {
+    display: inline-block;
+    color: rgb(5, 161, 96);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover effects for 'Read More' link */
+.featureItem .readMore:hover {
+    color: rgb(5, 161, 96);
+    text-decoration: underline;
+}
+
+/* Styles for the button */
+.btn {
+    position: absolute;
+    bottom: 10px;
+    background-color: rgb(5, 161, 96);
+    border-radius: 15px;
+    width: 150px;
+    height: 30px;
+    color: white;
+    right: 26px;
+    border: none;
+}
+
+/* Animation for FAQ answers */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        height: 0;
+    }
+    to {
+        opacity: 1;
+        height: auto;
+    }
+}
+
+.main-price{
+    position: absolute;
+    text-decoration: line-through;
+    left: 60px;
+    top: 183px;
+    font-size: small;
+    color: red;
+}
+
+/* Styles for product IDs */
+.offer-price {
+    position: absolute;
+    top: 180px;
+    color: black;
+    left: 10px;
+    font-size: 15px;
+}
+
+/* Styles for product name */
+.productName {
+    position: absolute;
+    left: 10px;
+    color: black;
+    top: 150px;
+    font-size: 14px;
+}
+
+/* Styling for review count */
+.reviewscount {
+    font-size: 10px;
+    top: 7px;
+    width: 80px;
+    position: absolute;
+    left: 10px;
+    font-style: italic;
+}
+
+/* Styling for photo background */
+.PhotoBG {
+    position: absolute;
+    /* background-color: rgb(194, 188, 188); */
+    width: 100%;
+    height: 160px;
+    top: -25px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+/* Styling for product images */
+.productImg {
+    position: absolute;
+    width: 150px;
+    left: 27px;
+    top: 5px;
+}
+
+/* Styles for banner offer */
+.bannerOffer {
+    width: 1100px;
+    height: 200px;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 20px auto;
+    margin-top:10px;
+}
+
+/* Styles for the 'Buy Now' button */
+
+.buynow button {
+    border: none;
+    /* background-color:green; */
+    position: relative;
+    left:49%;
+    scale: 2;
+    border-radius: 6px;
+    font-size: 10px;
+    width: 60px;
+    height: 20px;
+    bottom: 58px;
+    color: white;
+    animation: colorchanger 1.5s infinite;
+    
+}
+
+
+@keyframes colorchanger{
+    0%{
+        background-color: #3cb043;
+    }
+    20%{
+        background-color: #29AB87;
+    }
+    40%{
+        background-color: #3B7A57;
+    }
+    60%{
+        background-color: #00A693;
+    }
+    80%{
+        background-color: #50C878;
+    }
+    100%{
+        background-color: green;
+    }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(-1px); }
+    20% { transform: translateX(1px); }
+    30% { transform: translateX(-1px); }
+    40% { transform: translateX(1px); }
+    50% { transform: translateX(-1px); }
+    60% { transform: translateX(1px); }
+    70% { transform: translateX(-1px); }
+    80% { transform: translateX(1px); }
+    90% { transform: translateX(-1px); }
+    100% { transform: translateX(0); }
+}
+.buynow button:hover{
+    animation: paused;
+    background-color:rgb(5, 161, 96) ;
+    -webkit-box-shadow: -1px -1px 6px 1px rgba(0,0,0,0.68); 
+    box-shadow: -1px -1px 6px 1px rgba(0,0,0,0.68);
+}

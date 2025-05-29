@@ -1,0 +1,120 @@
+ <div id="revBox">
+                    <section id="reviews-section">
+                        <h2 class="h2">Our Testimonials</h2>
+                        <div id="reviews-container">
+                          <div class="review">
+                            <div class="photo"><img src="/image/noPfp.jpg" alt=""></div>
+                            <p class="text">"Excellent quality and service!"</p>
+                            <p class="name">- Ram Bhandari</p>
+                            <!-- Add to each review in your HTML file -->
+                            <div class="rating">
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star" style="color: gray;">★</span> <!-- Gray star for 4.5 rating -->
+                            </div>
+                  
+                          </div>
+                          <div class="review">
+                            <div class="photo">Photo of Sita</div>
+                            <p class="text">"Fresh and affordable products."</p>
+                            <p class="name">- Sita Karki</p>
+                            <!-- Add to each review in your HTML file -->
+                            <div class="rating">
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star" style="color: gray;">★</span> <!-- Gray star for 4.5 rating -->
+                            </div>
+                  
+                          </div>
+                          <div class="review">
+                            <div class="photo">Photo of Hari</div>
+                            <p class="text">"Great selection and fast delivery."</p>
+                            <p class="name">- Hari Thapa</p>
+                            <!-- Add to each review in your HTML file -->
+                            <div class="rating">
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star" style="color: gray;">★</span> <!-- Gray star for 4.5 rating -->
+                            </div>
+                  
+                          </div>
+                          <div class="review">
+                            <div class="photo">Photo of Anjali</div>
+                            <p class="text">"Friendly staff and clean store."</p>
+                            <p class="name">- Anjali Adhikari</p>
+                            <!-- Add to each review in your HTML file -->
+                            <div class="rating">
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star" style="color: gray;">★</span> <!-- Gray star for 4.5 rating -->
+                            </div>
+                  
+                          </div>
+                          <div class="review">
+                            <div class="photo">Photo of Ramesh</div>
+                            <p class="text">"High-quality goods at good prices."</p>
+                            <p class="name">- Ramesh Gurung</p>
+                            <!-- Add to each review in your HTML file -->
+                            <div class="rating">
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star" style="color: gray;">★</span> <!-- Gray star for 4.5 rating -->
+                            </div>
+                  
+                          </div>
+                          <div class="review">
+                            <div class="photo">Photo of Kamala</div>
+                            <p class="text">"My go-to grocery store!"</p>
+                            <p class="name">- Kamala Sharma</p>
+                            <!-- Add to each review in your HTML file -->
+                            <div class="rating">
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star" style="color: gray;">★</span> <!-- Gray star for 4.5 rating -->
+                            </div>
+                  
+                          </div>
+                          <div class="review">
+                            <div class="photo">Photo of Bimal</div>
+                            <p class="text">"Always a pleasant shopping experience."</p>
+                            <p class="name">- Bimal Pandey</p>
+                            <!-- Add to each review in your HTML file -->
+                            <div class="rating">
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star" style="color: gray;">★</span> <!-- Gray star for 4.5 rating -->
+                            </div>
+                  
+                          </div>
+                          <div class="review">
+                            <div class="photo">Photo of Meera</div>
+                            <p class="text">"Love the variety of items they offer."</p>
+                            <p class="name">- Meera Tamang</p>
+                            <!-- Add to each review in your HTML file -->
+                            <div class="rating">
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star">★</span>
+                              <span class="star" style="color: gray;">★</span> <!-- Gray star for 4.5 rating -->
+                            </div>
+                  
+                          </div>
+                        </div>
+                      </section>
+                  
+                </div>

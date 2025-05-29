@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+a{
+    color: grey;
+}
+.container h1{
+    font-size: 25px;
+    /* color: black; */
+}
+.heroImage{
+    width: 100%;
+    height: 100%;
+    transform: rotateY(-180deg);
+    transition: 3s;
+}
+.heroContent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 20%;
+    left: 20%;
+}
+.heroContent b{
+    display: block;
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    z-index: 1000;
+}
+.exploreButton{
+    position: absolute;
+    color: white;
+    top: 50%;
+    display: block;
+    padding: 15px 20px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 25px;
+}
+.container{
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 30% 30% 25%;
+    justify-content: center;
+    column-gap: 20px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.leftContainer, .middleContainer{
+    width: 100%;
+    display: grid;
+    gap: 20px;
+}
+.image{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    /* position: relative; */
+}
+.pFoot{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+}
+.container .tag{
+    width: 110px;
+    height: 40px;
+    font-size: 18px;
+    background-color: blue;
+    border-radius: 5px;
+    padding: 5px;
+}
+.container p{
+    font-size: 18px;
+    /* color: black; */
+}
+.like, .comment, .share{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.like{
+    border-left: 1px solid white;
+    padding-left: 10px;
+}
+.popularPosts .like{
+    margin-left: 10px;
+}
+.like img{
+    width: 20px;
+}
+.comment img{
+    width: 30px;
+}
+.share img{
+    width: 20px;
+}
+.lPost1, .lPost2, .lPost3, .mPost1, .mPost2, .mPost3{
+    /* width: 100%; */
+    /* color: white; */
+    display: grid;
+    gap: 20px;
+}
+.lPost3, .mPost1{
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 20px;
+}
+.bookmark1{
+    width: 30px;
+    margin-top: -50px;
+    margin-left: 340px;
+}
+.bookmark{
+    position: absolute;
+    width: 8%;
+    left: 15%;
+    top: -300px;
+}
+.tooltip {
+    position: relative;
+    left: 73%;
+    top: 50px;
+    display: inline-block;
+  }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: gray;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 270px;
+    left: 20%;
+    margin-left: -150px;
+    opacity: 0;
+    transition: opacity 1s;
+    font-size: 12px;
+  }
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 105%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: gray transparent transparent transparent;
+    transform: rotate(-90deg);
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  .tooltip1 {
+    position: relative;
+    top: -10px;
+    display: inline-block;
+  }
+  .tooltip1 .tooltiptext1 {
+    visibility: hidden;
+    width: 120px;
+    background-color: gray;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 5px;
+    left: 58%;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  .tooltip1 .tooltiptext1::after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 105%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: gray transparent transparent transparent;
+    transform: rotate(-90deg);
+  }
+  .tooltip1:hover .tooltiptext1 {
+    visibility: visible;
+    opacity: 1;
+  }
+.rightContainer{
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+a{
+    text-decoration: none;
+    /* color: black; */
+}
+.searchBox{
+    width: 100%;
+    height: 40px;
+    /* color: white; */
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid white;
+}
+.searchIcon{
+    width: 25px;
+    position: absolute;
+    right: 95px;
+    top: 115%;
+}
+.head{
+    /* color: white; */
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 15px 0;
+}
+.categories, .popularPosts, .trendingTags{
+    display: grid;
+    /* color: white; */
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.categories a{
+    text-decoration: none;
+    /* color: white; */
+}
+.rFoot{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.container span{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.trends{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.readMoreButton{
+    width: 900px;
+    height: 50px;
+    background-color: transparent;
+    color: blue;
+    border-radius: 5px;
+    border: 1px solid blue;
+    margin-top: 30px;
+}
+.readMoreButton:hover{
+    background-color: blue;
+    color: white;
+}
+.container h1:hover{
+    color: blue;
+}
+.categories a:hover{
+    color: blueviolet;
+}
+.categories a:active{
+    color: blue;
+}
+.popularPosts p:hover{
+    color: blue;
+}
+.exploreButton:hover{
+    background-color: white;
+    color: black;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+span:hover{
+    background-color: rgb(215, 214, 214);
+    color: black;
+    border: 1px solid rgb(215, 214, 214);
+}

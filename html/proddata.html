@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut-icon" href="images/icon.png" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bp.css">
+    <link rel="stylesheet" href="reviews.css">
+    <title>MartFlix | Bringing Freshness Home Daily</title>
+    <script defer src="script.js"></script>
+    <style>
+        /* CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 50% 50%; /* Adjusted the grid columns */
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .info-container {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .product-description {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .section-heading {
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .specifications {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .specifications li {
+            margin-bottom: 8px;
+        }
+
+        .price-availability {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .availability {
+            color: #28a745;
+        }
+
+        .reviews-section {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        blockquote {
+            font-style: normal;
+            margin-bottom: 10px;
+        }
+
+        .cta-section {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .cta-section label {
+            margin-right: 10px;
+            color: #333;
+        }
+
+        input {
+            width: 60px;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: #ff9900;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff8000;
+        }
+
+        h2, p {
+            color: #333;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+
+        #addToCart {
+            position: relative;
+            left: 10px;
+            top: 0.5px;
+        }
+
+        /* CSS for the back button */
+        #backButton {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            color: #333;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #backButton:hover {
+            background-color: #e0e0e0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="Header">
+        <nav class="nav">
+            <img src="images/logo.png" alt="MartFlix Logo" class="nav__logo" id="logo" />
+            <ul class="nav__links">
+                <li class="nav__item">
+                  <a class="nav__link" href="/html/index.html">Home</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/html/aboutus.html">About</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/html/product.html">Products</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/html/blog.html">Blog</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="/html/researchpage.html">Research</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link nav__link--btn btn--show-modal" href="/html/login.html">Join</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            <!-- Back Button -->
+            <button id="backButton" onclick="window.history.back()">Back</button>
+
+            <!-- Product Image Section -->
+            <div class="image-container">
+                <img src="https://www.health.com/thmb/tRImC9z9TBBDJyzVhW4qBUo_U0g=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Pineapple-23bf3fe789f64777a6e31bbaa77ea479.jpg" alt="Pineapple" class="product-image">
+            </div>
+
+            <!-- Product Information Section -->
+            <div class="info-container">
+                <!-- Product Title -->
+                <h1 class="product-title">Pineapple</h1>
+
+                <!-- Detailed Description -->
+                <p class="product-description">This pineapple is juicy, sweet, and perfect for enjoying as a snack or using in various recipes. It's a tropical delight that brings a burst of flavor to your meals.</p>
+
+                <hr>
+
+                <!-- Specifications -->
+                <h2 class="section-heading">Specifications:</h2>
+                <ul class="specifications">
+                    <li>Size: Medium</li>
+                    <li>Weight: 2 lbs</li>
+                    <li>Color: Yellow</li>
+                    <li>Material: Natural</li>
+                    <li>Special Features: Fresh, organic, and sweet</li>
+                </ul>
+
+                <hr>
+
+                <!-- Price and Availability -->
+                <div class="price-availability">
+                    <p class="price">Rs. 250 per unit</p>
+                    <p class="availability">In stock and ready to ship</p>
+                </div>
+
+                <hr>
+
+                <!-- Shipping Information -->
+                <h2 class="section-heading">Shipping Information:</h2>
+                <p>Estimated delivery time: 3-5 business days</p>
+                <p>Shipping cost: Rs. 120</p>
+
+                <hr>
+
+                <!-- Return Policy -->
+                <h2 class="section-heading">Return Policy:</h2>
+                <p>Returns accepted within 30 days of purchase in original condition.</p>
+
+                <hr>
+
+                <!-- Customer Reviews -->
+                <h2 class="section-heading">Customer Reviews:</h2>
+                <div class="reviews-section">
+                    <p>Customer rating: ★★★★☆ (4/5 stars)</p>
+                    <blockquote>"The pineapple was fresh and delicious!" - John D.</blockquote>
+                    <blockquote>"Great quality and value for the price." - Sarah M.</blockquote>
+                </div>
+
+                <hr>
+
+                <!-- Call to Action -->
+                <div class="cta-section">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="5" value="1">
+                    <button id="addToCart" class="btn btn-primary">Add to Cart</button>
+                </div>
+
+                <hr>
+
+                <!-- Additional Information -->
+                <h2 class="section-heading">Additional Information:</h2>
+                <p>Care Instructions: Store in a cool, dry place.</p>
+                <p>Usage Tips: Perfect for salads, smoothies, and desserts.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <ul class="footer__nav">
+            <li class="footer__item">
+                <a class="footer__link">Home</a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__link">About</a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__link">Products</a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__link">Blog</a>
+            </li>
+            <li class="footer__item">
+                <a class="footer__link">Research</a>
+            </li>
+        </ul>
+        <img src="images/logo.png" alt="MartFlix Logo" class="footer__logo" />
+        <p class="footer__copyright">
+            &copy; Copyright by
+            <a class="footer__link">MartFlix</a>
+        </p>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="/sliderPr.js"></script>
+    <script src="reviews.js"></script>
+    <script>
+        // JavaScript
+        document.addEventListener('DOMContentLoaded', () => {
+            const quantityInput = document.getElementById('quantity');
+            const addToCartButton = document.getElementById('addToCart');
+
+            // Function to ensure the quantity is within the allowed range (1 to 5)
+            function validateQuantity() {
+                let quantity = parseInt(quantityInput.value);
+                if (quantity < 1) {
+                    quantityInput.value = 1;
+                } else if (quantity > 5) {
+                    quantityInput.value = 5;
+                }
+            }
+
+            // Listen for changes in the quantity input and validate the quantity
+            quantityInput.addEventListener('change', validateQuantity);
+
+            // Add to Cart button click handler
+            addToCartButton.addEventListener('click', () => {
+                const quantity = quantityInput.value;
+                // Add code here to handle adding the item to the cart
+                alert(`Added ${quantity} pineapple(s) to the cart.`);
+            });
+        });
+    </script>
+</body>
+
+</html>

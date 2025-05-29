@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/product.css" />
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Blog page</title>
+    <style>
+      /* mode button code  */
+      .modeBox{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: fixed;
+          left: 35%;
+          top: 40%;
+          z-index: 1000;
+          pointer-events: none;
+          /* background-color: aqua; */
+      }
+      .button{
+          position: relative;
+          display: block;
+          width: 100px;
+          height: 50px;
+          border-radius: 200px;
+          background-color: white;
+          cursor: pointer;
+          pointer-events: all;
+          transition: 0.3s;
+          /* padding: 600px; */
+      }
+      #checkbox{
+          visibility: hidden;
+      }
+      .button::after{
+          content: "";
+          width: 40px;
+          height: 40px;
+          border-radius: 200px;
+          background-color: green;
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          transition: 0.3s;
+      }
+      #checkbox:checked + .button {
+          background-color: rgb(40, 37, 37);
+          transition: 0.3s;
+          /* box-shadow: inset 2px 2px 20px 1px grey , inset 2px -2px 20px 1px grey; */
+      }
+      #checkbox:checked + .button::after{
+          transform: translateX(51px);
+          transition: 0.3s;
+          background-color: black;
+      }
+      .moon{
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          top: 49%;
+          right: 47.2%;
+          pointer-events: none;
+          fill: grey;
+      }
+      .dark {
+          background: black;
+          color: white;
+        }
+      .sun{
+          width: 25px;
+          height: 25px;
+          position: absolute;
+          top: 49.42%;
+          left: 47.4%;
+          pointer-events: none;
+          fill: white;
+      }
+      /* mode button ends  */
+          </style>
+  </head>
+  <body>
+    
+      <!-- mode button starts -->
+      <div class="modeBox">
+        <input type="checkbox" name="" id="checkbox">
+        <label for="checkbox" class="button"> </label>
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+    
+    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+    <svg width="800px" height="800px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"  class="sun">
+    
+    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+    
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <g id="SVGRepo_iconCarrier"> <title>sun-solid</title> <g id="Layer_2" data-name="Layer 2"> <g id="invisible_box" data-name="invisible box"> <rect width="48" height="48" fill="none"/> </g> <g id="Q3_icons" data-name="Q3 icons"> <g> <path d="M24,10a2,2,0,0,0,2-2V4a2,2,0,0,0-4,0V8A2,2,0,0,0,24,10Z"/> <path d="M24,38a2,2,0,0,0-2,2v4a2,2,0,0,0,4,0V40A2,2,0,0,0,24,38Z"/> <path d="M36.7,14.1l2.9-2.8a2.3,2.3,0,0,0,0-2.9,2.3,2.3,0,0,0-2.9,0l-2.8,2.9a2,2,0,1,0,2.8,2.8Z"/> <path d="M11.3,33.9,8.4,36.7a2.3,2.3,0,0,0,0,2.9,2.3,2.3,0,0,0,2.9,0l2.8-2.9a2,2,0,1,0-2.8-2.8Z"/> <path d="M44,22H40a2,2,0,0,0,0,4h4a2,2,0,0,0,0-4Z"/> <path d="M10,24a2,2,0,0,0-2-2H4a2,2,0,0,0,0,4H8A2,2,0,0,0,10,24Z"/> <path d="M36.7,33.9a2,2,0,1,0-2.8,2.8l2.8,2.9a2.1,2.1,0,1,0,2.9-2.9Z"/> <path d="M11.3,14.1a2,2,0,0,0,2.8-2.8L11.3,8.4a2.3,2.3,0,0,0-2.9,0,2.3,2.3,0,0,0,0,2.9Z"/> <path d="M24,14A10,10,0,1,0,34,24,10,10,0,0,0,24,14Z"/> </g> </g> </g> </g>
+    
+    </svg>
+        <?xml version="1.0" encoding="utf-8"?>
+    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+    <svg  width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" class="moon">
+    <title>moon</title>
+    <path d="M10.895 7.574c0 7.55 5.179 13.67 11.567 13.67 1.588 0 3.101-0.38 4.479-1.063-1.695 4.46-5.996 7.636-11.051 7.636-6.533 0-11.83-5.297-11.83-11.83 0-4.82 2.888-8.959 7.023-10.803-0.116 0.778-0.188 1.573-0.188 2.39z"></path>
+    </svg>
+        </div>
+        <!-- mode button code ends -->
+        <!-- signup modal window -->
+    <div class="modal-signup hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Shop from us <br />
+        in just <span class="highlight">5 minutes</span>
+      </h2>
+      <form class="modal__form">
+        <label>First Name</label>
+        <input class="name" type="text" />
+        <label >Last Name</label>
+        <input class="lastName" type="text" />
+        <label>Email Address</label>
+        <input class="email" type="email" />
+        <button class="btn btn--submit">Start shopping &rarr;</button>
+      </form>
+    </div>
+    
+
+    <!-- main header and navigation  -->
+    <header class="Header" id="section--01">
+      <nav class="nav">
+        <img src="/images/martflixLogo.png" alt="MartFlix Logo" class="nav__logo "
+        id="logo" />
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="/html/index.html">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/html/aboutus.html">About</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/html/product.html">Products</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/html/blog.html">Blog</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/html/researchpage.html">Research</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--btn btn--show-modal" href="/html/login.html">Join</a>
+          </li>
+          <li class="nav__item icon-cart">
+            <svg
+              class="cart-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512">
+              <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+              />
+            </svg>
+            <span>0</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- header ends here  -->
+     <!-- hero content  -->
+    <div class="hero">
+      <img src="/images/blogImages/hero.jpeg" alt="" srcset="" class="heroImage">
+      <div class="heroContent">
+          <b>Martflix blog</b>
+          <a href="#exploreRedirect"><button class="exploreButton">Explore...</button></a>
+      </div>
+  </div>
+  <div class="container" id="exploreRedirect">
+    <!-- left container  -->
+      <div class="leftContainer">
+          <div class="lPost1">
+              <a href="blogPage1.html"><img src="/images/blogImages/digital rev 1.webp" class="image"></a>
+              <div class="tooltip"> <img src="/images/blogIcon/bookmark.png" class="bookmark"><span class="tooltiptext">Read Later</span></div>
+              <label class="tag">Technology</label>
+              <a href="blogPage1.html"><h1>The Digital Revolution:</h1></a>
+              <a href="blogPage1.html"><p>How Technology transforms daily life and business?</p></a>
+              <div class="pFoot">Aug 09, 2024  <div class="like"><img src="/images/blogIcon/like.png">5</div> <div class="comment"><img src="/images/blogIcon/comment.png">3</div> <div class="share"><img src="/images/blogIcon/share.png">2</div></div>
+          </div>
+          <div class="lPost2">
+              <a href="blogPage2.html"><img src="/images/blogImages/ai.jpeg" class="image"></a>
+              <div class="tooltip"> <img src="/images/blogIcon/bookmark.png" class="bookmark"><span class="tooltiptext">Read Later</span></div>
+              <label class="tag">Technology</label>
+              <a href="blogPage2.html"><h1>The Future of Artificial Intelligence: Opportunities and Challenges </h1></a>
+              <a href="blogPage2.html"><p>Artificial Intelligence (AI) has emerged as one of the most transformative technologies of the 21st century. From self-driving cars and virtual assistants to advanced medical diagnostics and personalized learning systems</p></a>
+              <div class="pFoot">Aug 09, 2024  <div class="like"><img src="/images/blogIcon/like.png">5</div> <div class="comment"><img src="/images/blogIcon/comment.png">3</div> <div class="share"><img src="/images/blogIcon/share.png">2</div></div>
+          </div>
+          <div class="lPost3">
+              <div class="tagBookmark">
+                  <label class="tag">Technology</label>
+                  <div class="tooltip1"> <img src="/images/blogIcon/bookmark.png" class="bookmark1"><span class="tooltiptext1">Read Later</span></div>
+              </div>
+              <a href="blogPage3.html"><h1>The Impact of Remote Work on Corporate Culture and Employee Well-being </h1></a>
+              <a href="blogPage3.html"><p>Remote work transforms corporate culture, emphasizing flexibility and digital communication. It enhances work-life balance and reduces commuting stress, boosting employee well-being. However, challenges include maintaining team cohesion and combating isolation. Effective strategies, like regular virtual meetings and fostering an inclusive culture, are essential for sustaining productivity and employee satisfaction in remote settings.</p></a>
+              <div class="pFoot">Aug 09, 2024  <div class="like"><img src="/images/blogIcon/like.png">5</div> <div class="comment"><img src="/images/blogIcon/comment.png">3</div> <div class="share"><img src="/images/blogIcon/share.png">2</div></div>
+          </div>
+      </div>
+      <!-- middle container  -->
+      <div class="middleContainer">
+          <div class="mPost1">
+              <div class="tagBookmark">
+                  <label class="tag">Technology</label>
+                  <div class="tooltip1"> <img src="/images/blogIcon/bookmark.png" class="bookmark1"><span class="tooltiptext1">Read Later</span></div>
+              </div>
+              <a href="blogPage4.html"><h1>The Rise of Sustainable Fashion: Trends, Challenges, and Innovations </h1></a>
+              <a href="blogPage4.html"><p>Sustainable development has risen as a crucial global focus, balancing economic growth, environmental protection, and social equity. This approach aims to meet present needs without compromising future generations, addressing climate change, resource depletion, and inequality. It promotes green technologies, renewable energy, and responsible consumption, ensuring a resilient and equitable future.
+              </p></a>
+              <div class="pFoot">Aug 09, 2024  <div class="like"><img src="/images/blogIcon/like.png">5</div> <div class="comment"><img src="/images/blogIcon/comment.png">3</div> <div class="share"><img src="/images/blogIcon/share.png">2</div></div>
+          </div>
+          <div class="mPost2">
+              <a href="blogPage5.html"><img src="/images/blogImages/sustainable.jpeg" class="image"></a>
+              <div class="tooltip"> <img src="/images/blogIcon/bookmark.png" class="bookmark"><span class="tooltiptext">Read Later</span></div>
+              <label class="tag">Technology</label>
+              <a href="blogPage5.html"><h1>Exploring Sustainable Living: Tips for Eco-Friendly Practices </h1></a>
+              <a href="blogPage5.html"><p>Sustainable living emphasizes minimizing environmental impact through conscious lifestyle choices. It involves reducing waste, conserving resources, and embracing renewable energy. Practices include recycling, eco-friendly transportation, and sustainable diets. This approach fosters a healthier planet, ensuring that natural resources remain available for future generations while promoting a balanced and harmonious coexistence with nature..</p></a>
+              <div class="pFoot">Aug 09, 2024  <div class="like"><img src="/images/blogIcon/like.png">5</div> <div class="comment"><img src="/images/blogIcon/comment.png">3</div> <div class="share"><img src="/images/blogIcon/share.png">2</div></div>
+          </div>
+          <div class="mPost3">
+              <a href="blogPage6.html"><img src="/images/blogImages/education.jpeg" class="image"></a>
+              <div class="tooltip"> <img src="/images/blogIcon/bookmark.png" class="bookmark"><span class="tooltiptext">Read Later</span></div>
+              <label class="tag">Technology</label>
+              <a href="blogPage6.html"><h1>The Rise of Remote Learning: Navigating Education in a Digital Age</h1></a>
+              <a href="blogPage6.html"><p>Remote learning revolutionizes education, offering flexibility, accessibility, and innovation in the digital era.</p></a>
+              <div class="pFoot">Aug 09, 2024  <div class="like"><img src="/images/blogIcon/like.png">5</div> <div class="comment"><img src="/images/blogIcon/comment.png">3</div> <div class="share"><img src="/images/blogIcon/share.png">2</div></div>
+          </div>
+      </div>
+      <!-- right container  -->
+      <div class="rightContainer">
+          <div class="search">
+              <input type="text" placeholder="search blog..." class="searchBox">
+              <img src="/images/blogIcon/search.png" class="searchIcon">
+          </div>
+          <div class="categories">
+              <label class="head">Categories</label>
+              <a href="#"><p class="trend" >All Topics</p></a>
+              <a href="#"><p class="trend">Technology</p></a>
+              <a href="#"><p class="trend">Education</p></a>
+              <a href="#"><p class="trend">Market</p></a>
+              <a href="#"><p class="trend">Sports</p></a>
+          </div>
+          <div class="popularPosts">
+              <label class="head">Popular Posts</label>
+              <a href="/html/blogPage1.html"><p>The Digital Revolution: How Technology transforms daily life and business?</p></a>
+              <div class="rFoot">Aug 09, 2024<div class="like"><img src="/images/blogIcon/like.png">5</div> <div class="comment"><img src="/images/blogIcon/comment.png">3</div> <div class="share"><img src="/images/blogIcon/share.png">2</div></div>
+              <a href="/html/blogPage4.html"><p>The Future of Artificial Intelligence: Opportunities and Challenges</p></a>
+              <div class="rFoot">Aug 09, 2024<div class="like"><img src="/images/blogIcon/like.png">5</div> <div class="comment"><img src="/images/blogIcon/comment.png">3</div> <div class="share"><img src="/images/blogIcon/share.png">2</div></div>
+              <a href="/html/blogPage5.html"><p>Exploring Sustainable Living: Tips for Eco-Friendly Practices</p></a>
+              <div class="rFoot">Aug 09, 2024<div class="like"><img src="/images/blogIcon/like.png">5</div> <div class="comment"><img src="/images/blogIcon/comment.png">3</div> <div class="share"><img src="/images/blogIcon/share.png">2</div></div>
+          </div>
+          <div class="trendingTags">
+              <label class="head">Tags</label>
+              <p class="trends"><span>#Lifestyle</span> <span>#Ux</span> <span>#Education</span> <span>#Trading</span> <span>#Football</span> <span>#Cricket</span> <span>#AI</span></p>
+
+          </div>
+      </div>
+      <button class="readMoreButton">Read More>>></button>
+  </div>
+    
+    <!-- Footer section -->
+    <section class = "main--footer " >
+      <footer class="footer">
+       <ul class="footer__nav">
+         <li class="footer__item">
+           <a class="footer__link" href="#">Home</a>
+         </li>
+         <li class ="footer__item">
+           <a class = "footer__link" href="#">About</a>
+         </li>
+         <li class="footer__item">
+           <a class="footer__link" href="#">Products</a>
+         </li>
+         <li class="footer__item">
+           <a class="footer__link" href="#">Blog</a>
+           </li>
+           <li class="footer__item">
+             <a class="footer__link" href="#">Research</a>
+           </li>
+             
+       </ul>
+       <img src="/images/productpageimg/logo.png" alt="MartFlix Logo" class="footer__logo" />
+       <p class="footer__copyright">
+         &copy; Copyright by
+         <a class="footer__link" href="#">MartFlix</a>
+       </p>
+      </footer>
+     </section>
+    <script src="/js/product.js"></script>
+    <script>
+      // mode button starts js
+      var checkBox = document.querySelector('#checkbox')
+      var body = document.body
+      var sun = document.querySelector(".sun");
+      var moon = document.querySelector(".moon");
+      
+      checkBox.addEventListener("change", ()=>{
+          if (checkBox.checked) {
+              body.classList.add("dark")
+              moon.style.fill = "white";
+              sun.style.fill = "grey";
+          } else {
+              body.classList.remove("dark")
+              sun.style.fill = "white";
+              moon.style.fill = "grey";
+          }
+      })
+      //mode button ends
+          </script>
+  </body>
+</html>

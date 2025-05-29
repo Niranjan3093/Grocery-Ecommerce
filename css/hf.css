@@ -1,0 +1,99 @@
+/* Resetting default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Setting default font for the body */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Styling the navigation bar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 89px;
+  width: 100%;
+  padding: 0 60px;
+  background-color: #f3f3f3;
+}
+
+/* Styling the links in the navigation bar */
+.nav a {
+  text-decoration: none;
+  color: #222;
+}
+
+/* Styling the list of links in the navigation bar */
+.nav__links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+/* Styling the individual links in the navigation bar */
+.nav__item {
+  margin-left: 40px;
+}
+
+/* Styling the button link in the navigation bar */
+.nav__link--button {
+  background-color: #5ec576;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 12.5px 45px;
+  border-radius: 99px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Styling the footer */
+.footer {
+  padding: 99px 30px;
+  background-color: #37383d;
+}
+
+/* Styling the list of links in the footer */
+.footer__nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+/* Styling the individual links in the footer */
+.footer__item {
+  margin-right: 40px;
+}
+
+/* Styling the links in the footer */
+.footer__link {
+  font-size: 16px;
+  color: #eee;
+  text-decoration: none;
+}
+
+/* Styling the logo in the footer */
+.footer__logo {
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+/* Styling the copyright text in the footer */
+.footer__copyright {
+  font-size: 14px;
+  color: #aaa;
+  text-align: center;
+}
+
+/* Styling the links in the copyright text in the footer */
+.footer__copyright.footer__link {
+  font-size: 14px;
+}

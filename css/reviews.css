@@ -1,0 +1,88 @@
+/* styles.css */
+#reviews-section {
+    width: 1250px; /* Full width for responsiveness */
+    max-width: 900px; /* Limit width for consistency */
+    height: 350px;
+    /* background-color: #f8f8f8; */
+    padding: 20px;
+    margin-bottom: 40px; /* Add margin-bottom to create space */
+    border-radius: 10px;
+    /* background-color: #f5f5f5; */
+    margin: auto; /* Center the section */
+    position: relative; /* For overlapping reviews */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+
+}
+
+
+#reviews-container {
+    position: relative; /* Needed for absolute positioning of reviews */
+}
+
+.review {
+    position: absolute; /* Stack reviews on top of each other */
+    width: 100%; /* Full width of the container */
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 2px solid rgb(5, 161, 96); */
+    border-radius: 10px;
+    /* background-color: #fff; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Hide reviews by default */
+    transition: opacity 3s ease-in-out; /* Smooth transition */
+    left: 0;
+    top: 0;
+}
+
+.review.visible {
+    opacity: 1; /* Make review visible */
+}
+
+.photo {
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    /* background-color: #ccc; */
+    margin: 0 auto 10px;
+    border-radius: 50%;
+}
+
+.text {
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.name {
+    color: rgb(5, 161, 96);
+    font-weight: bold;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.rating .star {
+    color: gold;
+    margin-right: 2px;
+}
+
+.h2 {
+    text-align: center;
+    color: rgb(5, 161, 96);
+    margin-bottom: 20px;
+}
+#revBox{
+    height: 400px;
+}
+img{
+padding: auto;
+}
+

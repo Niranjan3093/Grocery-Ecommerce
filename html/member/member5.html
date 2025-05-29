@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/member/member1.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/fontawesome/all.min.css" />
+    <link rel="stylesheet" href="/css/fontawesome/fontawesome.min.css" />
+  </head>
+
+  <body>
+    <!-- nav bar for personal info -->
+    <!-- <div id="loader">
+        <h1>Welcome</h1> 
+        <h1>To</h1>
+        <h1>My</h1>
+        <h1>Portfolio</h1>
+    </div> -->
+    <div id="container">
+      <div id="nav">
+        <!-- member image -->
+        <figure class="avatar-box">
+          <img src="/images/aboutusimage/img/madan.png" alt="member-image" style="width: 90px; height: 90px; border-radius: 6px;"/>
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="member-name">Madan Acharya</h1>
+          <p class="title">Co-founder</p>
+        </div>
+        <button class="info_more-btn" id="btn" onclick="toggleHide()" style="left:447px;">
+          <span>Show Contact</span>
+        </button>
+      </div>
+      <div id="contact-info" style="display: none">
+        <!--separator of personal info -->
+        <div class="separator"></div>
+        <!-- personal details -->
+        <ul class="contact-information">
+          <li class="contact-info-list">
+            <div class="img">              
+             <i class="fa-solid fa-envelope" style="color: gold; font-size: 20px;"></i>
+
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="#" class="contact-link">acharyamadan315@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-info-list">
+            <div class="img">
+              <!-- <img
+                src="/image/icon/icons8-smartphone-50.png"
+                alt=""
+                height="30px"
+              /> -->
+              <i class="fa fa-phone" style="color: gold; font-size: 20px;"></i>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link"
+                >+9779807575323</a
+              >
+            </div>
+          </li>
+          <li class="contact-info-list">
+            <div class="img">
+              <!-- <img
+                src="/image/icon/icons8-birthday-50.png"
+                alt=""
+                height="30px"
+              /> -->
+              <i class="fa-solid fa-cake-candles"  style="font-size: 20px; color: gold;"></i>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">July 23, 2002</time>
+            </div>
+          </li>
+          <li class="contact-info-list">
+            <div class="img">
+              <!-- <img
+                src="/image/icon/icons8-location-50 (2).png"
+                alt=""
+                height="30px"
+              /> -->
+              <i class="fa fa-location-dot" style="color: gold; font-size: 20px;"></i>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Gothgaun-3,Morang</address>
+            </div>
+          </li>
+        </ul>
+        <!-- separator -->
+        <div class="separator"></div>
+        <!-- social media icon -->
+        <ul class="social-list">
+          <a href="" style="margin-left: 30px">
+            <i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""> <i class="fa-brands fa-twitter"></i></a>
+        </ul>
+      </div>
+    </div>
+    <!-- Resume section -->
+    <section class="timeline">
+      <div class="timeline-row">
+        <!-- nav bar -->
+        <div
+          class="navbar"
+          style="
+            height: 50px;
+            width: 70%;
+            background-color: rgb(179, 151, 151);
+            margin-left: 319px;
+            border-radius: 0px 20px 0px 20px;
+          "
+        >
+          <button class="personal-info" id="educationBtn">
+            <h2 class="edu-Btn">Education</h2>
+          </button>
+          <button class="contact-me" id="contactBtn">
+            <h2>Contact</h2>
+          </button>
+        </div>
+        <!-- end nav bar -->
+        <!-- education and experince section -->
+        <div class="ed-ep-background" id="edEpBackground" style="width:650px;">
+          <div class="timeline-column">
+            <div class="timeline-box">
+              <div class="timeline-content">
+                <div class="content contentBtn">
+                  <h1
+                    style="
+                      font-size: 30px;
+                      position: relative;
+                      top: -15px;
+                      padding-left: 5px;
+                    "
+                  >
+                    Education
+                  </h1>
+                </div>
+              </div>
+              <div class="timeline-content">
+                <div class="content">
+                   <h1>Motherland Secondary School</h1>
+                  <div class="year">
+                    <i class="fa-regular fa-calendar"></i>2015 - 2020
+                  </div>
+                 
+                  <p>
+                    During my time at Motherland Secondary School, I developed a strong foundation in a range of subjects, including mathematics, science, computer science,and social studies. 
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-content">
+                <div class="content">
+                   <h1>Susma Godawari School</h1>
+                  <div class="year">
+                    
+                    <i class="fa-regular fa-calendar"></i>2021 - 2022
+                  </div>
+                 
+                  <p>
+                    I completed my Higher Secondary Education in a Management background, where I developed a solid understanding of business principles and practices. 
+                
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-content">
+                <div class="content">
+                  <h1>Itahari Internation College</h1>
+                  <div class="year">
+                    <i class="fa-regular fa-calendar"></i>2024 - Present
+                  </div>
+                  
+                  <p>
+                    I am currently pursuing my undergraduate degree in BSc Hons Computing, where I am developing a strong foundation in computer science and programming principles.
+
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="timeline-box">
+              <div class="timeline-content">
+                <div class="content contentBtn">
+                  <h1
+                    style="
+                      font-size: 30px;
+                      position: relative;
+                      top: -15px;
+                      padding-left: 5px;
+                    "
+                  >
+                    Experince
+                  </h1>
+                </div>
+              </div>
+              <div class="timeline-content">
+                <div class="content">
+                   <h1>Graphic Designer</h1>
+                  <div class="year">
+                    <i class="fa-regular fa-calendar"></i>2020 - 2021
+                  </div>
+                 
+                  <p>
+                    I worked as a graphic designer at e-Sewa Company, where I collaborated with cross-functional teams to create visually engaging designs for digital and print mediums, contributing to the brand's visual identity and marketing efforts.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-content">
+                <div class="content">
+                   <h1>UX/UI Designer</h1>
+                  <div class="year">
+                    <i class="fa-regular fa-calendar"></i>2022 - 2022
+                  </div>
+                 
+                  <p>
+                    UX/UI designer at ABC Company, I focused on creating interfaces for web and mobile applications that were user-friendly, engaging, and visually appealing, collaborating closely with teams and stakeholders while prioritizing human-centric design principles.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-content">
+                <div class="content">
+                  <h1>Backend Developer</h1>
+                  <div class="year">
+                    <i class="fa-regular fa-calendar"></i>2023- 2024
+                  </div>
+                  
+                  <p>
+                    I interned as a backend developer at Huncha Digital, gaining practical experience in coding and developing backend components.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="timeline-column"> -->
+
+            <!-- skill section -->
+            <div class="skill-container">
+              <h1>MY Skill</h1>
+              <div class="skills">
+                <li>
+                  <h3>html <span class="percentage">96%</span></h3>
+                  <span class="bar"><span class="html"></span></span>
+                </li>
+
+                <li>
+                  <h3>JavaScript<span class="percentage javaScript">26%</span></h3>
+                  <span class="bar"><span class="javascript"></span></span>
+                </li>
+
+                <li>
+                  <h3>CSS <span class="percentage">50%</span></h3>
+                  <span class="bar"><span class="css"></span></span>
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="contactSecTion" id="formSection">
+          <h1>Message Me</h1>
+          <form
+            name="myForm"
+            onsubmit="return validate()"
+            class="form"
+            id="form"
+          >
+            <div class="inputGroup name">
+              <input type="text" name="fname" id="fname" required />
+              <label for="name"><i class="fa-solid fa-user"></i> First Name</label>
+            </div>
+            <div class="inputGroup name">
+              <input type="text" name="lname" id="lname" required />
+              <label for="name"><i class="fa-solid fa-user"></i>Last Name</label>
+            </div>
+            <div class="inputGroup info">
+              <input type="text" name="number" id="number" required />
+              <label for="name"><i class="fa-solid fa-phone"></i>Phone No.</label>
+            </div>
+            <div class="inputGroup info">
+              <input type="email" name="email" id="Email" required/>
+              <label for="email"><i class="fa fa-envelope"></i>Email Id</label>
+            </div>
+            <div class="inputGroup subject">
+              <input type="text" name="subject" id="subject" required />
+              <label for="subject"><i class="fa-regular fa-clipboard"></i>Subject</label>
+            </div>
+            <div class="inputGroup" style="width: 100%">
+              <textarea
+                name="Message"
+                id="message"
+                rows="10"
+                style="width: 100%"
+                required
+              ></textarea>
+              <label for="name"><i class="fa-solid fa-message"></i>Message</label>
+            </div>
+            <div class="sendBtn" id="sendBtn">
+              <input type="submit" id="submit" value="Send"/>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact me form -->
+    </section>
+
+    <script src="/js/member/member1.js"></script>
+  </body>
+</html>

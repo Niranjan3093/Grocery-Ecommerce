@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MARTFLIX Reviews</title>
+    <link rel="stylesheet" type="text/css" href="tm.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <section id="reviews-section">
+        <h2>Our Testimonials</h2>
+        <div id="reviews-container">
+            <div class="review">
+                <div class="photo">Photo of Ram</div>
+                <p class="text">"Excellent quality and service!"</p>
+                <p class="name">- Ram Bhandari</p>
+                <!-- Add to each review in your HTML file -->
+<div class="rating">
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star" style="color: gray;">★</span> <!-- Gray star for 4.5 rating -->
+</div>
+
+            </div>
+            <div class="review">
+                <div class="photo">Photo of Sita</div>
+                <p class="text">"Fresh and affordable products."</p>
+                <p class="name">- Sita Karki</p>
+                <!-- Add to each review in your HTML file -->
+<div class="rating">
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star" style="color: gray;">★</span> <!-- Gray star for 4.5 rating -->
+</div>
+
+            </div>
+            <div class="review">
+                <div class="photo">Photo of Hari</div>
+                <p class="text">"Great selection and fast delivery."</p>
+                <p class="name">- Hari Thapa</p>
+                <!-- Add to each review in your HTML file -->
+<div class="rating">
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star" style="color: gray;">★</span> <!-- Gray star for 4.5 rating -->
+</div>
+
+            </div>
+            <div class="review">
+                <div class="photo">Photo of Anjali</div>
+                <p class="text">"Friendly staff and clean store."</p>
+                <p class="name">- Anjali Adhikari</p>
+                <!-- Add to each review in your HTML file -->
+<div class="rating">
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star" style="color: gray;">★</span> <!-- Gray star for 4.5 rating -->
+</div>
+
+            </div>
+            <div class="review">
+                <div class="photo">Photo of Ramesh</div>
+                <p class="text">"High-quality goods at good prices."</p>
+                <p class="name">- Ramesh Gurung</p>
+                <!-- Add to each review in your HTML file -->
+<div class="rating">
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star" style="color: gray;">★</span> <!-- Gray star for 4.5 rating -->
+</div>
+
+            </div>
+            <div class="review">
+                <div class="photo">Photo of Kamala</div>
+                <p class="text">"My go-to grocery store!"</p>
+                <p class="name">- Kamala Sharma</p>
+                <!-- Add to each review in your HTML file -->
+<div class="rating">
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star" style="color: gray;">★</span> <!-- Gray star for 4.5 rating -->
+</div>
+
+            </div>
+            <div class="review">
+                <div class="photo">Photo of Bimal</div>
+                <p class="text">"Always a pleasant shopping experience."</p>
+                <p class="name">- Bimal Pandey</p>
+                <!-- Add to each review in your HTML file -->
+<div class="rating">
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star" style="color: gray;">★</span> <!-- Gray star for 4.5 rating -->
+</div>
+
+            </div>
+            <div class="review">
+                <div class="photo">Photo of Meera</div>
+                <p class="text">"Love the variety of items they offer."</p>
+                <p class="name">- Meera Tamang</p>
+                <!-- Add to each review in your HTML file -->
+<div class="rating">
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star" style="color: gray;">★</span> <!-- Gray star for 4.5 rating -->
+</div>
+
+            </div>
+        </div>
+    </section>
+    <script>
+/* script.js */
+/* script.js */
+document.addEventListener('DOMContentLoaded', function() {
+    const reviewsContainer = document.getElementById('reviews-container');
+    const reviews = reviewsContainer.children;
+    const reviewCount = reviews.length;
+    let currentIndex = 0;
+    let intervalId;
+    
+    function showNextReview() {
+        // Hide current review
+        reviews[currentIndex].classList.remove('visible');
+        
+        // Move to the next review index
+        currentIndex = (currentIndex + 1) % reviewCount;
+        
+        // Show the next review
+        reviews[currentIndex].classList.add('visible');
+    }
+    
+    // Initially show the first review
+    reviews[currentIndex].classList.add('visible');
+    
+    // Start automatic review change
+    intervalId = setInterval(showNextReview, 4000);
+});
+
+    </script>
+</body>
+</html>

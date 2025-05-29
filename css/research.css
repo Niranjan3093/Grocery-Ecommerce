@@ -1,0 +1,279 @@
+/* Universal selector to reset padding and margin for all elements */
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+/* Styling for the body element */
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+
+  /* Background color set to a dark blue shade */
+  background-color: #f3f3f3;
+  line-height: 0.9;
+
+
+  /* Adding padding to the body element */
+}
+h3 {
+  margin-bottom: 7px;/* Add bottom margin */
+}
+
+/* Container for the sim and dif elements */
+.comparison {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 120vh; /* Set height */
+  gap: 80px; /* Set gap between grid items */
+  line-height: 1.5; /* Set line height */
+  padding: 0px 40px 40px 40px; /* Add padding */
+}
+
+.sim, .dif {
+  min-height: 50px; /* Set minimum height */
+  text-align: justify; /* Justify text */
+  gap: 10px; /* Set gap between grid items */
+  padding: 15px; /* Add padding */
+  background-color: #3498db; /* Set background color */
+  color: #fff; /* Set text color */
+  font-family: Georgia, 'Times New Roman', Times, serif; /* Set font family */
+
+  line-height: 0.9; /* Set line height */
+  font-size: 20px; /* Set font size */
+  border-radius: 10px; /* Set border radius */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add box shadow */
+  transition: transform 0.3s; /* Add transition effect */
+}
+
+.sim:hover, .dif:hover { /* Added hover effect */
+  transform: scale(1.02);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.similarities h3,.differences h3{
+  text-align: center; /* Center headings */
+}
+
+.wrapper{
+  position: absolute; /* Position element absolutely */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%,-50%); /* Center vertically */
+  font-family: big john; /* Set font family */
+  height: 280px; /* Set height */
+  padding-bottom: 50px; /* Add bottom padding */
+}
+.text1{
+  font-size: 50px; /* Set font size */
+  letter-spacing: 1.5px; /* Set letter spacing */
+  color: rgb(205, 82, 41); /* Set text color */
+  margin: 0; /* Remove margin */
+}
+
+.text2 {
+  font-size: 50px; /* Set font size */
+  letter-spacing: 1.5px; /* Set letter spacing */
+  color: rgb(205, 82, 41); /* Set text color */
+  margin: 0; /* Remove margin */
+  -moz-transform: scaleY(-1); /* Flip text vertically */
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  -webkit-mask-image: -webkit-gradient(linear, right top, right bottom, 
+  from(transparent), color-stop(20%, transparent), to(rgba(0, 0, 0, 0.4))); /* Add gradient mask */
+}
+
+.hero {
+  background: linear-gradient(to right, #f3f3f3, #fff); /* Add background gradient */
+  padding: 200px 0; /* Add padding */
+}
+
+.hero__container {
+  display: flex; /* Use flex layout */
+  flex-direction: column; /* Arrange items in a column */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  max-width: 1200px; /* Set maximum width */
+  margin: 0 auto; /* Center horizontally */
+  height: 90%; /* Set height */
+  text-align: center; /* Center text */
+  padding: 30px; /* Add padding */
+}
+
+
+.hero__heading {
+  font-size: 100px; /* Set font size */
+  margin-bottom: 24px; /* Add bottom margin */
+  color: #fff; /* Set text color */
+}
+/* Setting background, background linear gradient,
+ webkit background clip text, moz background clip text,
+ webkit text fill color,
+  and moz text fill color properties for hero heading span element */
+.hero__heading span {
+  background: #ee0979;
+  background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -mo-text-fill-color: transparent;
+}
+/* Setting font size, background, background linear gradient,
+ webkit background clip text, moz background clip text,
+webkit text fill color, and moz text fill color 
+properties for hero description element */
+.hero__description {
+  font-size: 60px;
+  background: #da22ff;
+  background: -webkit-linear-gradient(to right, #9114ff, #da22ff);
+  background: linear-gradient(to right, #8f0eff, #da22ff);
+  
+  -webkit-background-clip: text;
+  -moz-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+/* Setting border bottom, border width, and border color properties for highlight element */
+.highlight {
+  border-bottom: 4px solid rgb(132, 0, 255);
+}
+
+/* Setting font size, background, background linear gradient,
+ padding, border, border radius, margin top, cursor,
+  position, transition, 
+  and outline properties for main btn element */
+.main__btn {
+  font-size: 1.8rem;
+  background: #833ab4;
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  padding: 20px 60px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  outline: none;
+}
+
+/* Setting position, z-index, color, text decoration,
+ and outline properties for main btn a element */
+.main__btn a {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Setting display, justify content, align items,
+ width, border radius, flex direction,
+  gap, line height, margin, 
+  and padding properties for references element */
+.references {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  border-radius: 20px;
+  
+
+  flex-direction: column;
+  gap: 25px;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+/* Setting margin top, padding, font size, display, 
+letter spacing properties for head element */
+.head{
+  margin-top: 30px;
+  padding: 20px;
+  font-size: 20px;
+  display: inline-block;
+  letter-spacing: 1.5px;
+}
+
+
+ /* Setting the position, display, align items, margin, and color for the classes */
+ .yt, .w3, .dribble, .daraz, .mypay-container, .unsplash-container {
+  display: flex;
+  align-items: center;
+  margin: 50px;
+  color: white;
+}
+
+/* Setting background color, box shadow, height, width, 
+align items, text align, padding, border radius, 
+and margin properties for the text elements */
+.yt-text, .w3-text, .dribble-text, .daraz-text, .mypay-text, .unsplash-text{
+  background-color: #3498db;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  height: 100px;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  
+}
+
+/* Setting the border radius, height, width, and margin right */
+.youtube img{
+  border-radius: 10px;
+  height: 150px;
+  width: 200px;
+  margin-right: 40px;
+}
+/* Setting the border radius, height, width, and margin right */
+.w3schools img{
+  border-radius: 10px;
+  height: 150px;
+  width: 150px;
+  margin-left: 40px;
+}
+
+/* Setting the border radius, height, width, and margin right for the dribble img element */
+.dribble img {
+  border-radius: 10px;
+  height: 200px;
+  width: 200px;
+  margin-right: 20px;
+}
+
+/* Setting the height, width, border radius, and margin left for the daraz1 img element */
+.daraz1 img {
+  height: 100px;
+  width: 150px;
+  border-radius: 10px;
+  margin-left: 40px;
+}
+
+/* Setting the border radius, height, width, and margin right for the mypay img element */
+.mypay img {
+  border-radius: 10px;
+  height: 100px;
+  width: 200px;
+  margin-right: 40px;
+}
+
+/* Setting the height, width, and margin left for the daraz1 img element */
+.unsplash img{
+  height: 150px;
+  width: 200px;
+  margin-left: 40px;
+  border-radius: 25px;
+}
+
+/* Setting transform, transition, and box shadow properties
+ for references p element on hover */
+.references p:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}

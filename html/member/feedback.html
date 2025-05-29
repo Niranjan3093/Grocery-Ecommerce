@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut-icon" href="image/png" href="images/icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/member/feedback.css" />
+  <link rel="stylesheet" href="/css/fontawesome/all.min.css">
+  <link rel="stylesheet" href="/css/fontawesome/fontawesome.min.css">
+  <title>MartFlix | Bringing Freshness Home Daily</title>
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header class="Header">
+    <nav class="nav">
+      <img src="images/logo.png" alt="MartFlix Logo" class="nav__logo " id="logo" />
+      <ul class="nav__links">
+        <li class="nav__item">
+          <a class="nav__link" href="/html/index.html">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="/html/aboutus.html">About</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="/html/product.html">Products</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="/html/blog.html">Blog</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="/html/researchpage.html">Research</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link nav__link--btn btn--show-modal" href="/html/login.html">Join</a>
+        </li>
+
+      </ul>
+    </nav>
+    <!-- main section -->
+    <div class="blank"></div>
+   
+    <!-- form section -->
+    <div class="form-section" style="width: 100%; height:800px;">
+        <div class="form">
+            <h1>Drop your feedback<span style="color: rgb(235, 221, 222);">!</span></h1>
+            <!-- form section -->
+            <form name="myForm" id="myForm" onsubmit=" return formValidation()">
+             <div class="inputGroup">
+              <input type="text" placeholder="Enter your first name" name="fname">
+              <label>First Name</label>
+             </div>
+             <div class="inputGroup">
+              <input type="text" placeholder="Enter your first name" name="lname">
+              <label>Last Name</label>
+             </div>
+             <div class="inputGroup">
+              <select> 
+                <option>
+                  +977
+                </option>
+                <option>
+                  +101
+                </option>
+              </select>
+              <input type="number"  name="number"  class="phone" placeholder="Enter your number" style="width: 78%; border-left:none; border-radius: 0px 10px 0px 0px;">
+              <label>Phone No.</label>
+             </div>
+             <div class="inputGroup">
+              <input type="email" placeholder="Enter your email" name="email">
+              <label> Email Id</label>
+             </div>
+             <div class="inputGroup">
+              <input type="text" placeholder="Enter your address" name="address">
+        
+              <label>Address</label>
+             </div>
+             <div class="inputGroup">
+              <input type="text" placeholder="Enter your problem..." name="subject">
+              <label>Subject</label>
+             </div>
+             
+             <!-- fhg -->
+             <div class="inputGroup" style="width: 100%;">
+              <div  style="display: flex; padding-top: 20px;">
+              <input type="radio" name="rating" style="width: 14px; margin-left: 10px;" value="Excellent" checked > <span style="font-size: 20px; margin-left: 2px;">Excellent</span> 
+              <input type="radio" name="rating" style="width: 14px; margin-left: 10px;"  value="Good"> <span style="font-size: 20px; margin-left: 2px;">Good</span> 
+              <input type="radio" name="rating" style="width: 14px; margin-left: 10px;" value="Poor"> <span style="font-size: 20px; margin-left: 2px;">Poor</span> 
+            </div>
+              <label>How would you rate the variety of products available on our website?</label>
+             </div>
+             <!-- end -->
+             <div class="textarea">
+              <textarea name="message" name="message" id="message" rows="8" placeholder="Enter a message" ></textarea>
+              <label>Message</label>
+             </div>
+             <div class="inputGroup" style="width: 100%; display: flex;align-items: center ;justify-content: center;">
+              <input type="submit" style="width: 20%;">
+             </div>
+            </form>
+          </div>
+    </div>
+
+
+
+
+    <!-- end main section -->
+    <footer class="footer">
+        <ul class="footer__nav">
+          <li class="footer__item">
+            <a class="footer__link" href="#">Home</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="/html/aboutus.html">About</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Products</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Blog</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Research</a>
+          </li>
+  
+        </ul>
+        <img src="images/logo.png" alt="MartFlix Logo" class="footer__logo" />
+        <p class="footer__copyright">
+          &copy; Copyright by
+          <a class="footer__link" href="#">MartFlix</a>
+        </p>
+      </footer>
+  
+      <!-- coontact button it is stick button -->
+     <script src="/js/feedback.js"></script>
+      <script src="js/script.js"></script>
+  </body>
+  
+  </html>
